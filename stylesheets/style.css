@@ -9,10 +9,10 @@ body {
 .top{
 	background-color: #08121d;
 	font-family: 'Source Sans Pro',arial,sans-serif;
-	padding:20px 0;
+
 }
 
-h1 {
+.top a {
 	font-size: 32px;
 }
 
