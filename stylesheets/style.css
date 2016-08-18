@@ -22,7 +22,7 @@ h2 {
 	background-size: cover;*/
 	color: #222;
 	background-color:#0386c9;
-	padding: 250px 0;
+	padding: 100px 0;
 	margin: 30px;
 	text-shadow: 0 2px #000000;
 	font-family: 'Trebuchet MS', 'Helvetica';
@@ -43,4 +43,9 @@ p {
 #footer {
 	color: DarkSlateGray;
 	font-size: 16px;
+}
+
+.button1{
+
+
 }
