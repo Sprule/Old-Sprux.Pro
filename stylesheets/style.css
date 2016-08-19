@@ -12,6 +12,10 @@ body {
 	float: left;
 	height: 80%;
 	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	height: 80%;
+	width: 100%;
 }
 
 #logon {
