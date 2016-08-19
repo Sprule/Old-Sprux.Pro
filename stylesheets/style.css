@@ -9,10 +9,20 @@ body {
 .top {
 	background-color: #08121d;
 	font-family: 'Source Sans Pro',arial,sans-serif;
-	padding: 30px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: 20px;
+	float: left;
+	height: 80%;
+	width: 100%;
+}
+
+#logon {
+	float:left;
+	margin-right:50px;
+
+}
+
+#logo{
+	float:left;
+	margin-right:50px;
 
 }
 
