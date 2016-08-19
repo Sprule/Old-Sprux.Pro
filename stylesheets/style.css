@@ -13,7 +13,7 @@ body {
 	vertical-align: middle;
 	height: 30%;
 	width: 100%;
-	display:block;
+	display: inline-block;
 	margin:auto;
 	position:relative;
 }
@@ -51,7 +51,7 @@ h2 {
 	margin: auto;
 	text-shadow: 0 2px #000000;
 	font-family: 'Trebuchet MS', 'Helvetica';
-	display:block;
+	display: inline-block;
 	width: 100%;
 
 }
