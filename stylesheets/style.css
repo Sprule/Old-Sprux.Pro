@@ -40,6 +40,10 @@ body {
 	float:right;
 }
 
+.topright ul{
+	list-style: none;
+}
+
 #social-links {
 	float:left;
 	margin-right:0px;
