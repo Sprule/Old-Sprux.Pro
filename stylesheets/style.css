@@ -44,12 +44,11 @@ h2 {
 	background-color:#0386c9;
 	padding: 100px 0;
 	margin: auto;
-	margin-top: 30px;
-	padding-top: 150px;
 	text-shadow: 0 2px #000000;
 	font-family: 'Trebuchet MS', 'Helvetica';
 	display:block;
 	width: 100%;
+	position: relative;
 
 }
 
