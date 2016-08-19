@@ -37,7 +37,8 @@ body {
 }
 
 .topright{
-	float:right;
+	display: block;
+	float: right;
 }
 
 .topright ul{
