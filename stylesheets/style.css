@@ -9,6 +9,8 @@ body {
 .top{
 	background-color: #08121d;
 	font-family: 'Source Sans Pro',arial,sans-serif;
+	padding: 20px 0;
+	display: inline-block;
 
 }
 
