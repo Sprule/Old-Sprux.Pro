@@ -15,6 +15,11 @@ body {
 	width: 100%;
 	display:block;
 	margin:auto;
+	position:relative;
+}
+
+.top ul {
+	list-style: none;
 }
 
 #logon {
