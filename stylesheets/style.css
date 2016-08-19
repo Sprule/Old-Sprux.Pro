@@ -67,7 +67,7 @@ h2 {
 }
 
 
-.hero {
+.banner {
 	/*background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
 	background-position: center top;
 	background-size: cover;*/
@@ -88,10 +88,19 @@ p {
 	font-size: 2em;
 }
 
-.hero a {
+.banner a {
 	color: #00FFAA;
 	font-size: 24px;
 	text-decoration: none;
+}
+
+.info{
+	background-color: #ffffff;
+	height: 385px;
+	width: 100%;
+	color: #0e0e0e;
+	margin: auto;
+
 }
 
 #footer {
