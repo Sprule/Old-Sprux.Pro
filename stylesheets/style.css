@@ -9,9 +9,10 @@ body {
 .top {
 	background-color: #08121d;
 	font-family: 'Source Sans Pro',arial,sans-serif;
-	padding: 30px 0;
+	padding: 30px;
 	display: inline-block;
-	margin-right: 5px;
+	vertical-align: middle;
+	margin-top: 20px;
 
 }
 
