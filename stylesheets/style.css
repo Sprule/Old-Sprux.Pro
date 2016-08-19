@@ -6,10 +6,10 @@ body {
 	width: 100%;
 }
 
-.top{
+.top {
 	background-color: #08121d;
 	font-family: 'Source Sans Pro',arial,sans-serif;
-	padding: 20px 0;
+	padding: 40px 0;
 	display: inline-block;
 
 }
@@ -49,8 +49,4 @@ p {
 	text-decoration: none;
 }
 
-#footer {
-	color: DarkSlateGray;
-	font-size: 16px;
-}
 
