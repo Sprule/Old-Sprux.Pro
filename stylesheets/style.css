@@ -11,6 +11,8 @@ body {
 	font-family: 'Source Sans Pro',arial,sans-serif;
 	padding: 40px 0;
 	display: inline-block;
+	float: left;
+	margin-right: 5px;
 
 }
 
