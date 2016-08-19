@@ -70,9 +70,9 @@ h2 {
 
 
 .banner {
-	/*background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
+	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
 	background-position: center top;
-	background-size: cover;*/
+	background-size: cover;
 	color: #222;
 	background-color:#0386c9;
 	padding: 100px 0;
