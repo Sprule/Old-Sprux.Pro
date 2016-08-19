@@ -22,10 +22,11 @@ body {
 	list-style: none;
 }
 
-#logon {
+#logo {
 	float:left;
 	margin-right:50px;
 	color: #ffffff;
+	font-family: 'Source Sans Pro',arial,sans-serif;
 
 }
 
@@ -33,6 +34,15 @@ body {
 .top h1 {
 	font-size: 32px;
 	color: #ffffff;
+}
+
+.div{
+	float:right;
+}
+
+#social-links {
+	float:left;
+	margin-right:0px;
 }
 
 h2 {
