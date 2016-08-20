@@ -72,6 +72,7 @@ h2 {
 
 
 .banner {
+	z-index:2;
 	/*background: linear-gradient(
       rgba(50, 40, 200, 0.45), 
       rgba(100, 20, 10, 0.45)
@@ -90,6 +91,7 @@ h2 {
 }
 
 #video{
+	z-index:1;
 	top: 50%;
 	left: 50%;
 	min-width: 100%;
