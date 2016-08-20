@@ -129,6 +129,7 @@ p {
 	font-weight: 400;
 	color: #0e0e0e;
 	margin-right: 20px;
+	padding-right: 200px;
 	display: block;
 	float:right;
 
@@ -138,6 +139,8 @@ p {
 
 	float:left;
 	margin-left: 20px;
+	padding-left: 200px;
+	padding-top: 30px;
 	display:block;
 }
 
