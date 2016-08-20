@@ -147,6 +147,14 @@ p {
 	line-height: normal;
 }
 
+#latestvid{
+	float:right;
+	padding-right: 100px;
+	margin-top: 29px;
+	vertical-align: middle;
+	line-height: normal;
+}
+
 .info2{
 	background-color: #ffffff;
 	height: 200px;
