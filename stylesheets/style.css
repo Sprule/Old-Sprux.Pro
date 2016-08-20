@@ -72,14 +72,14 @@ h2 {
 
 
 .banner {
-	background: linear-gradient(
+	/*background: linear-gradient(
       rgba(50, 40, 200, 0.45), 
       rgba(100, 20, 10, 0.45)
-    ), url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
+    ), url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');*/
 	background-position: center top;
 	background-size: cover;
 	color: #222;
-	background-color:#0386c9;
+	/*background-color:#0386c9;*/
 	padding: 100px 0;
 	margin: auto;
 	text-shadow: 0 2px #000000;
@@ -88,13 +88,6 @@ h2 {
 	width: 100%;
 
 }
-
-.banner h2 {
-position: absolute;
-}
-
-}
-
 
 p {
 	color: #ffffff;
