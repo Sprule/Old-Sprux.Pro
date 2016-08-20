@@ -122,6 +122,15 @@ p {
 
 }
 
+.info2{
+	background-color: #ffffff;
+	height: 385px;
+	width: 100%;
+	color: #0e0e0e;
+	margin: auto;
+
+}
+
 .footerarea{
 	background-color: #08121d ;
 	width: 100%;
