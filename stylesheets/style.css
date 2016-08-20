@@ -89,6 +89,12 @@ h2 {
 
 }
 
+.banner h2 {
+position: absolute;
+}
+
+}
+
 
 p {
 	color: #ffffff;
