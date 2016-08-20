@@ -72,12 +72,10 @@ h2 {
 
 
 .banner {
-	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
-	  background: 
-      linear-gradient(
+	background: linear-gradient(
       rgba(255, 122, 122, 0.45), 
       rgba(255, 122, 122, 0.45)
-    ),
+    ), url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
 	background-position: center top;
 	background-size: cover;
 	color: #222;
