@@ -71,6 +71,25 @@
  
 
   <div class="info2">
+  
+  <script>
+	var youTubeURL = 'https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=P9RwC6EgEAQ&format=json';
+	var json = (function() {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': youTubeURL,
+        'dataType': "json",
+        'success': function(data) {
+            json = data;
+        }
+     });
+    return json;
+	})();
+	
+	alert("Title: " + json.entry.title.$t +"\nDescription:\n " + json.entry.media$group.media$description.$t + "\n");
+  </script>
 
 </div>
 
