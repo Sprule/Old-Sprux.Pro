@@ -121,7 +121,6 @@ p {
 	border-bottom: 1px solid;
 	border-color: #dedede;
 	display: block;
-	float: left;
 
 }
 
@@ -131,7 +130,13 @@ p {
 	color: #0e0e0e;
 	margin-left: 20px;
 	display: block;
+	float:right;
 
+}
+
+.info img{
+
+	float:left;
 }
 
 .info2{
