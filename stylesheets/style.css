@@ -114,12 +114,14 @@ p {
 
 .info{
 	background-color: #ffffff;
-	height: 200px;
+	height: 100px;
 	width: 100%;
 	color: #0e0e0e;
 	margin: auto;
 	border-bottom: 1px solid;
 	border-color: #dedede;
+	display: inline-block;
+	float:left;
 
 }
 
@@ -127,6 +129,8 @@ p {
 	font-family: 'Source Sans Pro',arial,sans-serif;
 	font-weight: 400;
 	color: #0e0e0e;
+	margin-left: 20px;
+
 }
 
 .info2{
