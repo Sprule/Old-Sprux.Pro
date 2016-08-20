@@ -120,7 +120,7 @@ p {
 	margin: auto;
 	border-bottom: 1px solid;
 	border-color: #dedede;
-	display: inline-block;
+	display: block;
 	float:left;
 
 }
