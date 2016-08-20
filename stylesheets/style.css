@@ -128,8 +128,7 @@ p {
 	font-family: 'Source Sans Pro',arial,sans-serif;
 	font-weight: 400;
 	color: #0e0e0e;
-	margin-right: 20px;
-	padding-right: 200px;
+	margin: 20px;
 	display: block;
     vertical-align: middle;
 	line-height: normal;
@@ -138,8 +137,7 @@ p {
 
 .info img{
 	float:left;
-	margin-left: 20px;
-	padding-left: 50px;
+	margin: 20px;
 	vertical-align: middle;
 	line-height: normal;
 }
