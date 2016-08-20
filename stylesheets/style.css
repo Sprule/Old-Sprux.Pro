@@ -120,6 +120,12 @@ p {
 
 }
 
+.footerarea{
+	background-color: #08121d ;
+	width: 100%;
+	height: 100px;
+}
+
 #footer {
 	color:#08121d;
 	font-size: 18px;
