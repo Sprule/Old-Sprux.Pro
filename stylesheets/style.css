@@ -148,6 +148,16 @@ p {
 }
 
 #latestvid{
+	float:left;
+	display: block;
+	margin-left: 400px;	
+	margin-top: 29px;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+
+#latestvid{
 	float:right;
 	padding-right: 100px;
 	margin-top: 29px;
