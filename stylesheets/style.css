@@ -121,6 +121,7 @@ p {
 	border-bottom: 1px solid;
 	border-color: #dedede;
 	display: block;
+	padding-left: 100px;
 
 }
 
@@ -130,7 +131,6 @@ p {
 	color: #0e0e0e;
 	margin-left: 10px;
 	margin-top: 29px;
-	padding-left: 100px;
 	display: block;
     vertical-align: middle;
 	line-height: normal;
@@ -143,7 +143,6 @@ p {
 	display: block;
 	margin-right: 10px;
 	margin-top: 29px;
-	padding-left: 100px;
 	vertical-align: middle;
 	line-height: normal;
 }
