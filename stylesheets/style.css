@@ -128,7 +128,7 @@ p {
 	font-family: 'Source Sans Pro',arial,sans-serif;
 	font-weight: 400;
 	color: #0e0e0e;
-	margin-left: 20px;
+	margin-right: 20px;
 	display: block;
 	float:right;
 
@@ -137,6 +137,8 @@ p {
 .info img{
 
 	float:left;
+	margin-left: 20px;
+	display:block;
 }
 
 .info2{
