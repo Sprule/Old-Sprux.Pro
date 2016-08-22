@@ -224,7 +224,8 @@ p {
 #footer {
 	color: #ffffff;
 	font-size: 18px;
-	padding-top: 80px;
+	padding:40px;
+	margin-top: 70px;
 	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
 }
 
