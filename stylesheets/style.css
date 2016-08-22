@@ -224,7 +224,8 @@ p {
 #footer {
 	color: #ffffff;
 	font-size: 18px;
-	padding-top: 40px;
+	padding-top: 80px;
+	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
 }
 
 .saturate {-webkit-filter: saturate(3); filter: saturate(3);}
