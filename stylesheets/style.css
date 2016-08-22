@@ -8,6 +8,10 @@ body {
 	width: 100%;
 }
 
+.container{
+	width: 100%;
+}
+
 .top {
 	background-color: #08121d;
 	font-family: 'Source Sans Pro',arial,sans-serif;
@@ -36,6 +40,7 @@ body {
 .top h1 {
 	font-size: 32px;
 	color: #ffffff;
+	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
 }
 
 .topright{
@@ -152,6 +157,7 @@ p {
 	margin-top: 29px;
 	vertical-align: middle;
 	line-height: normal;
+	text-align: center;
 }
 
 
@@ -164,12 +170,51 @@ p {
 }
 
 .info2{
+	font-family: 'Source Sans Pro',arial,sans-serif;
 	background-color: #ffffff;
 	height: 200px;
 	width: 100%;
 	color: #0e0e0e;
 	margin: auto;
+	float:left;
+    border-bottom: 1px solid;
+	border-color: #dedede;
 
+}
+
+.info2 h2 {
+	font-family: 'Source Sans Pro',arial,sans-serif;
+	font-weight: 400;
+	color: #0e0e0e;
+	margin-left: 10px;
+	margin-top: 29px;
+	display: block;
+    vertical-align: middle;
+	line-height: normal;
+	float:left;
+
+}
+
+.info2 img{
+	float:left;
+	display: block;
+	margin-right: 10px;
+	margin-top: 29px;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+#views{
+	float:left;
+}
+
+#viewcounter{
+	padding-left: 100px;
+}
+
+
+#thumbs{
+	float:left;
 }
 
 .footerarea{
