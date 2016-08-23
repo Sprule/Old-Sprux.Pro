@@ -171,9 +171,11 @@ p {
 	display: block;
 	margin-right: 10px;
 	margin-top: 29px;
+	padding-left: 50px;
 	vertical-align: middle;
 	line-height: normal;
 }
+
 
 #vidtitle{
 	margin-left: 400px;
