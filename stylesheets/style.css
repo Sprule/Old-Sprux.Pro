@@ -136,11 +136,24 @@ p {
 	background-color: #cd201f;
 }
 
+#youtubetitle{
+    font-family: 'Source Sans Pro',arial,sans-serif;
+	font-weight: 400;
+	color: #0e0e0e;
+	margin-left: 10px;
+	margin-top: 29px;
+    display: block;
+    vertical-align: middle;
+	line-height: normal;
+	float:left;
+
+
+}
 
 .info h2 {
 	font-family: 'Source Sans Pro',arial,sans-serif;
 	font-weight: 400;
-	color: #ffffff;
+	color: #0e0e0e;
 	margin-left: 10px;
 	margin-top: 29px;
 	display: block;
