@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -7,70 +7,123 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link rel='stylesheet' href='stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
   </head>
 <body>
 
+<div class="background-overlay fadein"></div>
 
+
+
+<div class="alltop">
 
 <div class="top">
 
-<ul list-style: none;>
-	<li id="logo" > <a href="/" style="text-decoration: none"> <h1>Sprux Inc.</h1> </a> </li>
+  <ul id="ultopleft" list-style: none;>
+    <li id="logoimg"> <img src="s.company.png" height="50" width="150" > </li>
+    <audio id="audio">
+    <source
+    <li id="musicimg">  </li>
+
 
 	</ul>
 
-	<div class="topright" >
+	<div class="topmiddle">
+	<nav id="pages">
 
-<nav id="social-links">
+	<ul id="ulpages" list-style: none;>
 
-<ul list-style: none;>
+	<li id="nav1"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>Youtube</h2> </a> </li>
 
-<li id="Twitter"> <a href="https://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="29" width="30" > </a> </li>
+	<li id="nav2"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>Twitter</h2> </a> </li>
 
-<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="29" width="30" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="29" width="30" >  </a> </li>
-
-<li id="Github"> <a href="https://github.com/Sprule"> <img height="29" width="30" src="http://www.measurementjs.com/icon-images/github-icon.png" height="29" width="30" >  </a> </li>
-
-</ul>
-
-</nav>
-
-</div>
-
-</div>
+	<li id="nav3"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>GitHub</h2> </a> </li>
 
 
-
-	<div class="banner">
-
-		<h2 style=" border:1px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
-		<p>A Professional Coder</p>
-
-
-		<button style="margin: 10px;" class="btn btn-success"> Contact Now </button>
-		</span>
+	</ul>
+	</nav>
 
 	</div>
 
 
 
+	<div class="topright" >
+
+	<nav id="social-links">
+
+	<ul id="ultopright" list-style: none;>
+
+	<li id="Twitter"> <a href="http>s://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="29" width="30" > </a> </li>
+
+	<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="29" width="30" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="29" width="30" >  </a> </li>
+
+	<li id="Github"> <a href="https://github.com/Sprule"> <img height="29" width="30" src="http://www.measurementjs.com/icon-images/github-icon.png" height="29" width="30" >  </a> </li>
+
+	</ul>
+
+	</nav>
+
+	</div>
+
+	</div>
+
+
+
+	<div class="banner">
+
+<video autoplay loop id="video-background" muted>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
+		<p>A Professional Coder | GFX | VFX | Web Designer | member</p>
+
+
+		<button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-globe" style="color:white" > </span> Contact Now </button>
+		<button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-bullhorn" style="color:white" > </span> Share This </button>
+
+		</span>
+
+	
+
+	</div>
+
+<span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span>
+
+	</div>
+
+
+
+
+
+    <script src="https://apis.google.com/js/platform.js"></script>
+
  <div class="info">
 
- <span id="youtubespan">
- <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img id="youtubelogo" display="block" height="37" width="38" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-512.png"> </img>
- <h2 id="youtubetitle"> Youtube </h2> </a>
- </span>
+ 	<div id="youtubedivleft">
 
- <a href="https://www.youtube.com/watch?v=P9RwC6EgEAQ" > <h2 id="vidtitle"> Minehut | 3v3 Season 1- How to Get High Elo </h2>
- </a>
+ 	<a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA">
+ 	<h2 id="youtubetitle"> Youtube </h2> 
+ 	</a>
 
- <a href="https://www.youtube.com/watch?v=P9RwC6EgEAQ">
- <h2 id="latestvid"> Latest Video </h2>
- </a>
+ 	<div class="g-ytsubscribe" data-channel="xWishxful" data-layout="full" data-count="default"></div>
 
-</div>
+ 	</div> 
 
- <iframe id="video" frameborder="0" height="450" width="100%" position="absolute" volume="0" top="0" left="0" right="0" bottom="0" muted allowfullscreen src="https://www.youtube.com/embed/P9RwC6EgEAQ?controls=0&showinfo=0&autohide=1" >
+	 <a href="https://www.youtube.com/watch?v=P9RwC6EgEAQ" > <h2 id="vidtitle"> Minehut | 3v3 Season 1- How to Get High Elo </h2> 
+	 </a>
+
+	 <a href="https://www.youtube.com/watch?v=P9RwC6EgEAQ">
+	 <h2 id="latestvid"> Latest Video </h2>
+	 </a>
+
+ </div>
+
+ <iframe id="video" frameborder="0" height="300" width="100%" position="absolute" volume="0" top="0" left="0" right="0" bottom="0" frameborder="0" muted src="https://www.youtube.com/embed/P9RwC6EgEAQ?controls=0&showinfo=0&autohide=0" >
   </iframe>
 
  
@@ -126,6 +179,8 @@
 </div>
 
 </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.5.0/APlayer.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
