@@ -32,4 +32,8 @@ $(document).ready(function() {
     }, 600);
 
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> origin/master
