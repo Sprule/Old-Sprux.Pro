@@ -10,7 +10,10 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="http://vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet">
+  	<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
   </head>
 <body>
@@ -24,9 +27,8 @@
 <div class="top">
 
   <ul id="ultopleft" list-style: none;>
-    <li id="logoimg"> <img src="s.company.png" height="50" width="150" > </li>
+   <a href="/" <li id="logoimg"> <img src="Images/s.company.png" height="50" width="150" > </li> </a>
     <audio id="audio">
-    <source
     <li id="musicimg">  </li>
 
 
@@ -37,12 +39,13 @@
 
 	<ul id="ulpages" list-style: none;>
 
-	<li id="nav1"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>Youtube</h2> </a> </li>
+	<li id="nav1"> <a class="jumper" href="#leaguegg" style="text-decoration: none; color: #ffffff;"> <h2>League.gg</h2> </a> </li>
 
-	<li id="nav2"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>Twitter</h2> </a> </li>
+	<li id="nav2"> <a class="jumper" href="#orbisio" style="text-decoration: none; color: #ffffff;"> <h2>Orbis.io</h2> </a> </li>
 
-	<li id="nav3"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>GitHub</h2> </a> </li>
+	<li id="nav3"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>LumixCraft</h2> </a> </li>
 
+    <li id="nav4"> <a href="/" style="text-decoration: none; color: #ffffff;"> <h2>About Me</h2> </a> </li>
 
 	</ul>
 	</nav>
@@ -75,7 +78,7 @@
 
 	<div class="banner">
 
-<video autoplay loop id="video-background" muted>
+ <video autoplay loop id="video-background" muted>
   <source src="video.mp4" type="video/mp4">
 </video>
 
@@ -92,85 +95,74 @@
 
 	</div>
 
-<span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span>
+<a class="jumper" href="#leaguegg"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
 
 	</div>
 
 
 
+<div id="leaguegg">
+ <img src="Images/leaguelogo3.png" height="150" width="250"  > </img>
+<img src="Images/leaguelogo2.png" height="150" width="250"  > </img>
+<img src="Images/leaguelogo.png" height="150" width="250"  > </img>
 
+<h2 style="padding-bottom: 25px;"> A League of Legends Name Checker </h2>
+<span id="orbisiofeatures" style="font-size: 20px; margin-left: 5px; padding: 2px; padding-left: 5px; padding-right: 5px;" class="label label-default">FEATURES</span>
+<ul style="padding-top: 20px;">
+	<li>Check Player Names </li>
+	<li>Check Team Names </li>
+	<li>Check Club Names </li>
+	<li>View Upcoming & Recent Names </li>
+</ul>
 
-    <script src="https://apis.google.com/js/platform.js"></script>
-
- <div class="info">
-
- 	<div id="youtubedivleft">
-
- 	<a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA">
- 	<h2 id="youtubetitle"> Youtube </h2> 
- 	</a>
-
- 	<div class="g-ytsubscribe" data-channel="xWishxful" data-layout="full" data-count="default"></div>
-
- 	</div> 
-
-	 <a href="https://www.youtube.com/watch?v=P9RwC6EgEAQ" > <h2 id="vidtitle"> Minehut | 3v3 Season 1- How to Get High Elo </h2> 
-	 </a>
-
-	 <a href="https://www.youtube.com/watch?v=P9RwC6EgEAQ">
-	 <h2 id="latestvid"> Latest Video </h2>
-	 </a>
-
- </div>
-
- <iframe id="video" frameborder="0" height="300" width="100%" position="absolute" volume="0" top="0" left="0" right="0" bottom="0" frameborder="0" muted src="https://www.youtube.com/embed/P9RwC6EgEAQ?controls=0&showinfo=0&autohide=0" >
-  </iframe>
-
- 
-
-  <div class="info2">
-
-<span id="views">
-  <img> </img>
-  <h2 id="viewcounter"> # Views </h2>
-</span>
-
- <span id="thumbs">
-  <h2 id="likes">
-  </h2>
-  <img> </img>
-
-  <h2 id="dislikes">
-  </h2>
-  <img> </img>
-
-  </span>
+		<a href="league.gg"><button style="margin: 10px;" class="fill"> <span id="leagueggbutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span> Visit Now </button></a>
   </div>
-  <hr>
-
-  <div class="moreinfo2">
-  
-
-  <script>
-	var youTubeURL = 'https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=P9RwC6EgEAQ&format=json';
-	var json = (function() {
-    var json = null;
-    $.ajax({
-        'async': false,
-        'global': false,
-        'url': youTubeURL,
-        'dataType': "json",
-        'success': function(data) {
-            json = data;
-        }
-     });
-    return json;
-	})();
-	
-	alert("Title: " + json.entry.title.$t +"\nDescription:\n " + json.entry.media$group.media$description.$t + "\n");
-  </script>
 
   </div>
+
+
+<div id="orbisio">
+ <img src="Images/orbislogo4.png" height="150" width="250"  > </img>
+ <img src="Images/orbislogo3.png" height="150" width="250"  > </img>
+  <img src="Images/orbislogo2.png" height="150" width="250"  > </img>
+   <img src="Images/orbislogo.png" height="150" width="250"  > </img>
+   <h2 style="padding-bottom: 25px;"> A MapleStory Name Checker </h2>
+
+<span id="orbisiofeatures" style="font-size: 20px; margin-left: 5px; padding: 2px; padding-left: 5px; padding-right: 5px;" class="label label-info">FEATURES</span>
+
+   <ul style="padding-top: 20px;">
+	<li>Check Player Names </li>
+	<li>Dictionary Name Filter</li>
+	<li>Name Length Filter</li>	
+	<li>View Recent Names</li>
+</ul>
+
+	<a href="orbis.io">	<button style="margin: 10px;" class="fill"> <span id="orbisiobutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span>  Visit Now  </button></a>
+
+  </div>
+
+<div id="lumixcraft">
+<img src="Images/lumixlogo2.png" height="150" width="350"  > </img>
+ <img src="Images/lumixlogo.png" height="150" width="150"  > </img>
+  <img id="lumixlogo3" src="Images/lumixlogo3.png" height="150" width="390" > </img>
+
+     <h2> LumixCraft | A Community Building Server</h2>
+<span style="font-size: 14px; margin-left: 5px; padding: 3px;" class="label label-success">Version 1.10</span>
+<h4 id="iptext">IP: </h4>
+ <input id="ipbox" type="text" value="mc.lumix.online" onclick="this.select()">
+
+   <ul style="padding-top: 20px;">
+	<li>Modern Building World </li>
+	<li>Medieval Building World</li>
+	<li>Minigame Workshop World</li>
+	<li>Project Recruitment Hub</li>	
+	<li>90x90 & 45x45 Plot Worlds</li>
+</ul>
+
+
+	<a href="lumixcraft.enjin.com">	<button style="margin: 10px;" class="fill"> <span id="lumixcraftbutton" class="glyphicon glyphicon-eye-open" style="color:#383736;"  > </span>  Visit Now  </button></a>
+
+</div>
 
 <div class="footerarea">
 
@@ -185,6 +177,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="http://vjs.zencdn.net/5.11.6/video.js"></script>
 
 </body>
 </html>
