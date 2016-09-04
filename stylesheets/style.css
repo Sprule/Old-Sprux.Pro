@@ -366,6 +366,7 @@ button {
 }
 
 .banner {
+	background-image: url("paper.gif");
 	background-position: center top;
 	background-size: cover;
 	color: #222;
@@ -497,6 +498,17 @@ p {
     padding: 10px 0 10px 20px;
     text-indent: -1em;
 
+}
+
+
+#aboutme{
+		height: 50%;
+	width: 100%;
+	background-color: #2c353a;
+	color: #292f33;	
+	border-top: solid 2px #ffffff;
+	font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;	
+	float: center;
 }
 
 .footerarea{
