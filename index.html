@@ -84,18 +84,36 @@
 		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
 		<p>A Professional Coder | GFX | VFX | Web Designer</p>
 
+<script language="javascript"> 
+function toggle() {
+	var ele = document.getElementById("contacttexts");
+	var text = document.getElementById("displaycontact ");
+	if(ele.style.display == "inline") {
+    		ele.style.display = "inline-block";
+    		text.style.display = "block";
 
+  	}
+	else if(ele.style.display != "inline") {
+		
+		ele.style.display = "inline";
+		text.style.display = "none";
 
-	<button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-globe" style="color:white" value='hide/show' > </span> Contact Now </button> 
+	}
+} 
+</script>
+
+	<a id="displaycontact" href="javascript:toggle();" style="display:inline;"> <button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-globe" style="color:white" value='hide/show' > </span> Contact Now </button> </a>
 
 		<button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-bullhorn" style="color:white" > </span> Share This </button>
 
 		</span>
   
-<div id="form-main">
+  <div id="contacttexts" style="display: none;">
+<div id="form-main" >
   <div id="form-div">
     <form class="form" id="form1">
-      
+<div class="row">
+<div class="col">
       <p class="name">
         <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
       </p>
@@ -103,12 +121,14 @@
       <p class="email">
         <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
       </p>
-      
+</div>
+
+<div class="col">
       <p class="text">
         <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
       </p>
-      
-      
+      </div>
+      </div>
       <div class="submit">
         <input type="submit" value="SEND" id="button-blue"/>
         <div class="ease"></div>
@@ -116,8 +136,7 @@
     </form>
   </div>
 
-
-
+	</div>
 	</div>
 
 <a class="jumper" href="#leaguegg"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>

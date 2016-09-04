@@ -92,8 +92,15 @@ button {
   top: 0;
 }
 
+.row {
+  display: flex; /* equal height of the children */
+}
 
+.col {
+  flex: 1; /* additionally, equal width */
+  
 
+}
 
 #feedback-page{
 	text-align:center;
@@ -110,7 +117,6 @@ button {
 	padding-right:35px;
 	padding-bottom:50px;
 	width: 450px;
-	float: left;
 	left: 50%;
 	position: absolute;
   margin-top:30px;
@@ -187,6 +193,7 @@ button {
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 	display:inline;
+	margin-left: 20px;
 }
 
 textarea {
