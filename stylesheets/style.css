@@ -526,6 +526,26 @@ p {
   -webkit-transition: 0.08s ease-in;
 }
 
+#lumixcraft .fill:hover {
+  color: 
+}
+
+#lumixcraft .fill:before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+#lumixcraft .fill:hover:before {
+  top: 0;
+}
+
 #aboutme{
 		height: 50%;
 	width: 100%;
@@ -558,6 +578,8 @@ p {
 	font-size:26px;
 
 }
+
+
 
 
 .footerarea{
