@@ -626,13 +626,46 @@ p {
 	width: 100%;
 	height: 150px;
 	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+	margin: auto;
+	border-top: 2px whitesmoke solid;
 }
 
 .footerarea h2 {
 	margin: auto;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 17px;
 	padding:50px;
+	float:left;
+	vertical-align: center;
+	margin-top:20px;
+}
+
+
+}
+
+#fulpages{
+
+    float:right;
+	display: inline;
+	vertical-align: center;
+	width: 100%;
+	list-style: none;
+	float:left;
+    margin-right: 30px;
+}
+
+#fpages li{
+
+    float:right;
+	display: inline;
+	vertical-align: center;
+}
+
+#fpages h2{
+	font-weight:50px;
+	letter-spacing: 2px;
+	font-size: 17px;
+
 }
 
 .saturate {-webkit-filter: saturate(3); filter: saturate(3);}
