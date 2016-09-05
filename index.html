@@ -86,17 +86,17 @@
 
 <script language="javascript"> 
 function toggle() {
+	var text = document.getElementById("displaycontact");
 	var ele = document.getElementById("contacttexts");
-	var text = document.getElementById("displaycontact ");
-	if(ele.style.display == "inline") {
-    		ele.style.display = "inline-block";
-    		text.style.display = "block";
+	if(text.style.display == "inline") {
+    		text.style.display = "inline-block";
+    		ele.style.display = "block";
 
   	}
-	else if(ele.style.display != "inline") {
-		
-		ele.style.display = "inline";
-		text.style.display = "none";
+	else if(text.style.display != "inline") {
+
+		text.style.display = "inline";
+		ele.style.display = "none";
 
 	}
 } 
@@ -121,6 +121,11 @@ function toggle() {
       <p class="email">
         <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
       </p>
+
+            <div class="submit">
+        <input type="submit" value="SEND" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
 </div>
 
 <div class="col">
@@ -129,10 +134,7 @@ function toggle() {
       </p>
       </div>
       </div>
-      <div class="submit">
-        <input type="submit" value="SEND" id="button-blue"/>
-        <div class="ease"></div>
-      </div>
+
     </form>
   </div>
 
