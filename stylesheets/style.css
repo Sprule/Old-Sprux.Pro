@@ -329,13 +329,6 @@ input:focus, textarea:focus {
     margin-left: 30px;
 }
 
-#nav1{
-
-}
-
-#nav2{
-	
-}
 
 #logoimg{
 	float:left;
@@ -664,7 +657,7 @@ p {
 	font-size: 20px;
     list-style-type: disc;
     list-style-position: inside;
-    padding: 10px 0 10px 20px;
+    padding-top: 10px;
     text-indent: -1em;
 
 }
@@ -674,7 +667,6 @@ p {
   //display:block;
   height: 45px;
   width: 200px;
-  margin: 10px 7px;
   padding: 5px 5px;
   font-weight: 700;
   font-size: 15px;
@@ -716,7 +708,7 @@ p {
 }
 
 #minehut{
-		height: 50%;
+		height: 65%;
 	width: 100%;
 	background-color: #2c353a;
 	color: #ffffff;	
@@ -763,7 +755,7 @@ p {
 }
 
 #mhlogo3:hover{
-    background: rgba(39,62,84,0.82);
+    background-color: rgba(39,62,84,0.82);
 }
 
 #mhlogo4:hover{
@@ -771,11 +763,19 @@ p {
 }
 
 #mhlogo5:hover{
-    background: rgba(75,0,130,0.5);
+    background-color: rgba(75,0,130,0.5);
 }
 
 #mhlogo6:hover{
 	background-color: rgba(0,255,0, 0.5);
+}
+
+#mhlogov6:hover{
+	background-color: #fefefe;
+}
+
+#mhlogov5:hover{
+	background-color: #fefefe;
 }
 
 #aboutme p{
@@ -784,8 +784,10 @@ p {
 
 }
 
-#minehutbutton{
+#minehut button{
+	display:block;
 	margin:auto;
+	max-width: 300px;
 }
 
 
@@ -836,6 +838,15 @@ p {
 	font-size: 17px;
 
 }
+
+#fpages h2:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+ 	-webkit-transition: opacity .1s ease;
+ 	border-bottom: 2px solid white;
+ 	padding-bottom:3px;
+ 	line-height:10px;
+	}
 
 .saturate {-webkit-filter: saturate(3); filter: saturate(3);}
 .grayscale {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
