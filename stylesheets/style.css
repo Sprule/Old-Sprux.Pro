@@ -771,7 +771,7 @@ p {
 }
 
 #mhlogo5:hover{
-    background: rgba(75,0,130);
+    background: rgba(75,0,130,0.5);
 }
 
 #mhlogo6:hover{
