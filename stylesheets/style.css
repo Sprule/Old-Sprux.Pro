@@ -488,6 +488,7 @@ input:focus, textarea:focus {
 	color: #ffffff;
 	font-size: 100px;
 	letter-spacing: 30px;
+
 }
 
 #bannerarrow{
@@ -528,7 +529,7 @@ input:focus, textarea:focus {
 }
 
 .banner {
-	background-image: url("paper.gif");
+	background-image: url("http://i.imgur.com/LZ8mpaP.jpg");
 	background-position: center top;
 	background-size: cover;
 	color: #222;
