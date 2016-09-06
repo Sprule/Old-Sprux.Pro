@@ -263,11 +263,11 @@ input:focus, textarea:focus {
 }
 
 .alltop{
-	  background-image: url("http://i.imgur.com/LZ8mpaP.jpg");
-	  background: linear-gradient(
+		background-image: url("http://i.imgur.com/LZ8mpaP.jpg");
+	  /*background: linear-gradient(
       rgba(50, 40, 200, 0.45), 
       rgba(100, 20, 10, 0.45)
-    );
+    );*/
 	  width:100%;
 
 }
