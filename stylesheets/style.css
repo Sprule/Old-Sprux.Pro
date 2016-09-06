@@ -263,11 +263,13 @@ input:focus, textarea:focus {
 }
 
 .alltop{
+	  background-image: url("http://i.imgur.com/LZ8mpaP.jpg");
 	  background: linear-gradient(
       rgba(50, 40, 200, 0.45), 
       rgba(100, 20, 10, 0.45)
     );
 	  width:100%;
+
 }
 
 .top {
@@ -529,7 +531,6 @@ input:focus, textarea:focus {
 }
 
 .banner {
-	background-image: url("http://i.imgur.com/LZ8mpaP.jpg");
 	background-position: center top;
 	background-size: cover;
 	color: #222;
