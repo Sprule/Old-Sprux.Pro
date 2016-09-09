@@ -262,14 +262,17 @@ input:focus, textarea:focus {
 	}
 }
 
-.alltop{
-		background-image: url("http://i.imgur.com/LZ8mpaP.jpg");
-	  /*background: linear-gradient(
+.container{
+	width:100%;
+	max-height:100%;
+	padding: 0px;
+	background-image: ;
+
+	/*background-image: url("http://i.imgur.com/CfMD6dB.jpg");*/
+	/*background: linear-gradient(
       rgba(50, 40, 200, 0.45), 
       rgba(100, 20, 10, 0.45)
     );*/
-	  width:100%;
-
 }
 
 .top {

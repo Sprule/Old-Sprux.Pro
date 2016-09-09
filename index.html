@@ -18,8 +18,15 @@
 <div class="background-overlay fadein"></div>
 
 
+<script>
+var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://minecraftgallery.com/wp-content/uploads/2013/04/minecraft-forest-mountain.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png'];
 
-<div class="alltop">
+ $('#container').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+</script>
+
+
+<div class="container" id="container">
 
 <div class="top">
 
@@ -76,10 +83,12 @@
 
 
 	<div class="banner">
-
+<!--
  <video autoplay loop id="video-background" muted>
   <source src="video.mp4" type="video/mp4">
 </video>
+-->
+
 <span id="centerbanner">
 		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
 		<p>A Professional Coder | GFX | VFX | Web Designer</p>
@@ -146,7 +155,7 @@ function toggle() {
 <a class="jumper" href="#leaguegg"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
 
 	</div>
-
+</div>
 
 
 <div id="leaguegg">
@@ -166,7 +175,7 @@ function toggle() {
 		<a href="http://league.gg/"><button style="margin: 10px;" class="fill"> <span id="leagueggbutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span> Visit Now </button></a>
   </div>
 
-  </div>
+  
 
 
 <div id="orbisio">
