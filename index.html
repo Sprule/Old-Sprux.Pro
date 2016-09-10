@@ -34,7 +34,11 @@ document.getElementById('container').style.backgroundImage = "url(" + link + ")"
 
 }
 
-$( document ).ready(document.getElementById('container').innerHTML = imagechange(imagenumber()));
+$( document ).ready(function(){
+
+document.getElementById('container').innerHTML = imagechange(imagenumber());
+
+});
 
 </script>
 
