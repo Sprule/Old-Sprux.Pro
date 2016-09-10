@@ -25,6 +25,7 @@ function imagenumber() {
 
  var imglink = images[Math.floor(Math.random() * images.length)];
 
+  return imglink;
 }
 
 function imagechange(link){
@@ -33,10 +34,9 @@ document.getElementById('container').style.backgroundImage = "url(" + link + ")"
 
 }
 
-document.getElementById('container').innerHTML = imagechange(imagenumber()); 
+$( document ).ready(document.getElementById('container').innerHTML = imagechange(imagenumber()));
 
 </script>
-
 
 
 <div class="container" id="container">
