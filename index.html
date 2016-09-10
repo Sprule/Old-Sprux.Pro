@@ -21,9 +21,22 @@
 <script>
 var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://minecraftgallery.com/wp-content/uploads/2013/04/minecraft-forest-mountain.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png'];
 
- $('#container').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+function imagenumber() {
+
+ var imglink = images[Math.floor(Math.random() * images.length)];
+
+}
+
+function imagechange(link){
+
+document.getElementById('container').style.backgroundImage = "url(" + link + ")";
+
+}
+
+document.getElementById('container').innerHTML = imagechange(imagenumber()); 
 
 </script>
+
 
 
 <div class="container" id="container">
