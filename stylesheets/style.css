@@ -267,6 +267,8 @@ input:focus, textarea:focus {
 	max-height:100%;
 	padding: 0px;
 	background-repeat: no-repeat;
+	background-size:cover;
+	min-width:100%;
 	/*background-image: url("http://i.imgur.com/CfMD6dB.jpg");*/
 	/*background: linear-gradient(
       rgba(50, 40, 200, 0.45), 
