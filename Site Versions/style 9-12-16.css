@@ -1,4 +1,3 @@
-
  @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
     @keyframes fadein {
@@ -31,7 +30,6 @@
 	}
 
 body {
-	position: relative;
 	font-family: Georgia, serif;
 	height: 100%;
 	margin: auto;
@@ -47,7 +45,7 @@ body {
 
 
 
-.banner button {
+button {
   position: relative;
   height: 45px;
   width: 200px;
@@ -72,80 +70,6 @@ body {
   -webkit-transition: 0.08s ease-in;
 }
 
-#leaguegg button {
-  position: relative;
-  height: 45px;
-  width: 200px;
-  margin: 10px 7px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  border: 2px #ffffff solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  background: none;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
-}
-
-#orbisio button {
-  position: relative;
-  height: 45px;
-  width: 200px;
-  margin: 10px 7px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  border: 2px #ffffff solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  background: none;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
-}
-
-#minehut button {
-  position: relative;
-  height: 45px;
-  width: 200px;
-  margin: 10px 7px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  border: 2px #ffffff solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  background: none;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
-}
 .fill:hover {
   color: whitesmoke;
 }
@@ -352,7 +276,7 @@ input:focus, textarea:focus {
 }
 
 .top {
-
+	background-color: rgba(39,54,59,0.2) ;
 	font-family: "proxima-nova", "Helvetica Neue", Helvetica !important;
 	float: left;
 	vertical-align: middle;
@@ -366,6 +290,7 @@ input:focus, textarea:focus {
     -webkit-align-content: center;
     align-content: center;
     text-align: center;
+    border-bottom: 2px solid;
     border-bottom-color: white;
 
 }
@@ -394,17 +319,9 @@ input:focus, textarea:focus {
 
 #ultopright {
 	list-style: none;
-	display: inline;
+	display: block;
+	float:left;
 	vertical-align: center;
-	border-bottom: solid 2px white;
-	padding-bottom: 30px;
-
-}
-
-#ultopright li{
-	display:inline-block;
-	margin-right:30px;
-	margin-top:10px;
 
 }
 
@@ -475,70 +392,21 @@ input:focus, textarea:focus {
 
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff !important; 
-}
-
-
-.navbar-brand, .navbar-nav > li > a {
-    text-shadow: none !important;
-}
-
-#navlogo{
-	margin:auto;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.navbar{
-	font-family: "Monserrant", sans-serif;
-    font-size: 16px;
-    padding:8px;
-    margin-bottom: none;
-
+#nav1{
 
 }
 
-.navbar li{
-	margin-left:10px;
+#nav2{
+		margin-left:80px;
 }
 
-.navbar-brand{
-	font-size:20px;
-	float:none;
+#nav3{
+		margin-left:80px;
 }
 
-.navbar-custom { 
-	background-color: rgba(51, 51, 51, 0);
-	border-bottom: 0px;
+#nav4{
+		margin-left:80px;
 }
-
-.navbar-custom .navbar-nav>.active>a:hover,.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus { background-color: #333333}
-.navbar-custom .navbar-nav>.active>a,.navbar-custom .navbar-nav>.open>a,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus { background-color: #2B2B2B}
-.dropdown-menu { background-color: #FFFFFF}
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #428BCA}
-.navbar-custom { background-image: none; }
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
-.navbar-custom { border-color: #333333}
-.navbar-custom .navbar-brand { color: #999999}
-.navbar-custom .navbar-brand:hover { color: #FFFFFF}
-.navbar-custom .navbar-nav>li>a { color: #FFFFFF}
-.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus { color: #A1A09D}
-.navbar-custom .navbar-nav>.active>a,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus { color: #9CA9FF}
-.navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus { color: #9CA9FF}
-.dropdown-menu>li>a { color: #333333}
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
-.navbar-custom .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
-.navbar-custom .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
-.navbar-custom .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
-.navbar-custom .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
-
-
-
-.nav.navbar-right{
-	margin-right:10px;
-}
-
 
 .top h1 {
 	font-size: 32px;
@@ -582,7 +450,44 @@ input:focus, textarea:focus {
 	-webkit-transition: background-color .5s ease;
 	}
 
+.topright{
+	display: block;
+	float: right;
+	margin-bottom: 20px;
+	margin-right:20px;
 
+}
+
+.topright ul{
+	list-style: none;
+}
+
+#social-links {
+	float:left;
+	margin-right:30px;
+	margin-top:25px;
+}
+
+#social-links li{
+	float: left;
+	padding-left: 20px;
+}
+
+#social-links ul li a{
+	width: 29px;
+	height: 30px;
+	display: block;
+
+
+}
+
+#social-links ul li img{
+
+}
+
+#social-links img:hover {
+
+	}
 
 .banner h2 {
 	color: #ffffff;
@@ -671,22 +576,9 @@ p {
 	text-decoration: none;
 }
 
-#projects{
-	height:25%;
-	background-color: #373a3c;
-
-}
-
-#projects h2{
-	color:#ffffff;
-	font-size: 40px;
-    font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;	
-}
-
 #leaguegg{
 	height: 50%;
 	width: 100%;
-	background-image: url(https://d3kq2xhl2rew87.cloudfront.net/lan_event/background_image/0/1/6/lol_worlds_main_bg_PEu6A3H.jpg);
 	background-color: #373a3c;
 	border-top: solid 2px #ffffff;
 	color: #ffffff;
@@ -819,7 +711,7 @@ p {
 }
 
 #minehut{
-	height: 50%;
+		height: 65%;
 	width: 100%;
 	background-color: #2c353a;
 	color: #ffffff;	
@@ -911,28 +803,22 @@ p {
 	margin: auto;
 	border-top: 2px whitesmoke solid;
 
-
 }
 
 .footerarea h2 {
 	margin: auto;
 	color: #ffffff;
 	font-size: 17px;
+	float:left;
 	margin-left:50px;
 	margin-right:50px;
 	vertical-align: center;
 	
 }
 
-#logoimgf{
-	margin-right: 30px;
-	margin-top: 15px;
-	display:inline-block
-}
 
 #copyright{
-  margin-right: 35px;
-  margin-top: 50px;
+	margin-left:80px;
 }
 
 #fulpages{
@@ -942,7 +828,7 @@ p {
 	vertical-align: center;
 	width: 100%;
 	list-style: none;
-
+	float:left;
     margin-right: 30px;
     margin-top:100px;
 }
@@ -958,17 +844,18 @@ p {
 	font-weight:50px;
 	letter-spacing: 2px;
 	font-size: 17px;
-	align:center;
 
 }
 
 #footerp{
 	font-size:14px;
+	float:left;
 	margin-left: 80px;
 }
 
 #footerp2{
 	font-size:14px;
+	float:left;
 	margin-left: 80px;
 	border-bottom: 2px solid white;
 	padding-bottom: 8px;
@@ -983,6 +870,11 @@ p {
  	line-height:10px;
 	}
 
+	#logoimgf{
+		float:left;
+		margin-left:40px;
+		margin-top:30px;
+	}
 
 .saturate {-webkit-filter: saturate(3); filter: saturate(3);}
 .grayscale {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
@@ -993,4 +885,3 @@ p {
 .sepia {-webkit-filter: sepia(100%); filter: sepia(100%);}
 .huerotate {-webkit-filter: hue-rotate(180deg); filter: hue-rotate(180deg);}
 .rss.opacity {-webkit-filter: opacity(50%); filter: opacity(50%);}
-
