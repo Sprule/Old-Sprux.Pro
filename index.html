@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
   </head>
-<body data-spy="scroll" data-target=".navbar-custom">
+<body data-spy="scroll" data-target=".navbar-custom" data-offset="50">
 
 
 <div class="background-overlay fadein"></div>
@@ -36,16 +36,16 @@
 
 <script>
 $(document).scroll(function() {
-  var dHeight = $(this).height()-$(window).height();
+  var dHeight = $(this).height()-$('.banner').height();
   if (dHeight >= $(this).scrollTop()) {
-    $('.navbar').css('background', 'rgba(51,51,51,' + $(this).scrollTop() / dHeight + ')');
+    $('.navbar').css('background', 'rgba(51,51,51,' + $(this).scrollTop()*3 / dHeight + ')');
   }
 });
 </script>
 
 <div class="container" id="container">
 
-<div class="top">
+<div class="top" id="top">
 
 <div class="navbar transparent navbar-fixed-top navbar-custom " >
   <div class="container-fluid">
@@ -58,7 +58,7 @@ $(document).scroll(function() {
         <span class="icon-bar"></span>
 
       </button>
-      <a class="navbar-brand" href="#"><img id="navlogo" src="Images/s.company.png" alt="Sprux" height="50px" width="150px"> </img> </a>
+  <a class="navbar-brand" href="#top"><img id="navlogo" src="Images/s.company.png" alt="Sprux" height="50px" width="150px" > </img> </a> 
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
