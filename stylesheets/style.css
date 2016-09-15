@@ -675,7 +675,7 @@ p {
 }
 
 #projects{
-	height:17%;
+	height:15%;
 	background-color: #373a3c;
 	display:flex;
 	align-items:center
@@ -764,9 +764,8 @@ p {
 #orbisio{
 	height: 50%;
 	width: 100%;
-	background-color: #1e87c3;
+    background-color: #1e87c3;
 	color: #ffffff;	
-	border-top: solid 2px #ffffff;
 	font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;	
 }
 
@@ -871,6 +870,8 @@ p {
   top: 0;
 }
 
+/*
+
 #minehut{
 	height: 50%;
 	width: 100%;
@@ -899,7 +900,6 @@ p {
         display: inline-block;
         margin: 0;
         padding: 0;
-        /* For IE, the outcast */
         zoom:1;
 
 }
@@ -954,7 +954,7 @@ p {
 	max-width: 300px;
 }
 
-
+*/
 
 .footerarea{
 	background-color: #08121d ;
@@ -962,7 +962,6 @@ p {
 	height: 220px;
 	font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
 	margin: auto;
-	border-top: 2px whitesmoke solid;
 
 
 }

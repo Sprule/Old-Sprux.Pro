@@ -48,6 +48,16 @@ $(document).scroll(function() {
 });
 </script>
 
+<script>
+$(document).on('click','#topnavbutton', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1200);
+});
+</script>
+
 <div class="container" id="container">
 
 <div class="top" id="top">
@@ -69,11 +79,11 @@ $(document).scroll(function() {
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#bannercontainer">Home</a></li>
-        <li><a href="#leaguegg">League.gg</a></li>
-        <li><a href="#orbisio">Orbis.io</a></li>
-        <li><a href="#lumixcraft">LumixCraft</a></li>
-        <li><a href="#minehut">Logos</a></li>
+        <li class="active" id="topnavbutton" data-target="bannercontainer" ><a href="#bannercontainer">Home</a></li>
+        <li id="topnavbutton" data-target="leaguegg" ><a  href="#leaguegg">League.gg</a></li>
+        <li id="topnavbutton" data-target="orbisio" ><a  href="#orbisio">Orbis.io</a></li>
+        <li id="topnavbutton" data-target="lumixcraft" ><a  href="#lumixcraft">LumixCraft</a></li>
+        
  </ul>
 
      <ul class="nav navbar-nav navbar-right">
@@ -164,8 +174,18 @@ function toggle() {
 	</div>
 	</div>
 
-<a class="jumper" href="#leaguegg"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
-
+<script>
+$(document).on('click','#button', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1200);
+});
+</script>
+<div id="button" data-target="leaguegg">
+<a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
+</div>
 	</div>
 </div>
 
@@ -221,7 +241,6 @@ function toggle() {
 
   
 
-
 <div id="orbisio">
  <img src="Images/orbislogo4.png" height="150" width="250"  > </img>
  <img src="Images/orbislogo3.png" height="150" width="250"  > </img>
@@ -260,7 +279,13 @@ function toggle() {
 		<p id="serverdesc" style="font-weight: 1;"> 
 
 <button class="btn btn-primary" type="button">
-LumixCraft Website
+Forums
+</button>
+<button class="btn btn-primary" type="button">
+Store
+</button>
+<button class="btn btn-primary" type="button">
+Vote
 </button>
 
 					</div>
@@ -292,6 +317,8 @@ LumixCraft Website
 	<a href="https://lumixcraft.enjin.com">	<button style="margin: 10px;" class="fill"> <span id="lumixcraftbutton" class="glyphicon glyphicon-eye-open" style="color:#383736;"  > </span>  Visit Now  </button></a>
 
 </div>
+
+<!--
 
 <div id="minehut">
 
@@ -327,6 +354,8 @@ LumixCraft Website
 </ul>
 
 </div>
+
+-->
 
 <footer class="footerarea">
 	<div class="grid-container">
