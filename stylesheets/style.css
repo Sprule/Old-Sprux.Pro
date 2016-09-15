@@ -306,13 +306,10 @@ input:focus, textarea:focus {
 	color: #0493bd;
 }
 	
-.submit:hover {
-	color: #3498db;
-}
+
 	
 .ease {
 	width: 0px;
-	height: 74px;
 	background-color: rgba(0,0,0,0);
 	-webkit-transition: .3s ease;
 	-moz-transition: .3s ease;
@@ -529,15 +526,15 @@ input:focus, textarea:focus {
 .navbar-custom .navbar-brand { color: #999999}
 .navbar-custom .navbar-brand:hover { color: #FFFFFF}
 .navbar-custom .navbar-nav>li>a { color: #FFFFFF}
-.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus { color: #A1A09D}
+.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus .ease { border-bottom: white 2px solid;}
 .navbar-custom .navbar-nav>.active>a,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus { color: #9CA9FF}
-.navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus { color: #9CA9FF}
+.navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus .ease { color: rgb(156, 169, 255)}
 .dropdown-menu>li>a { color: #333333}
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
 .navbar-custom .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
 .navbar-custom .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
 .navbar-custom .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
-.navbar-custom .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+.navbar-custom .navbar-nav>.dropdown>a:hover .caret  { border-bottom-color: #FFFFFF}
 
 
 
@@ -678,23 +675,73 @@ p {
 }
 
 #projects{
-	height:25%;
+	height:17%;
 	background-color: #373a3c;
-
+	display:flex;
+	align-items:center
 }
 
-#projects h2{
+#projects p{
 	color:#ffffff;
-	font-size: 40px;
-    font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;	
+	font-size: 60px;
+    font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
+
+#projectsdesc{
+	font-size:30px !important;
+	font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: 100;
+	color: #b0b0b0 !important;
+
+}
+
+#projects .glyphicon{
+	font-size: 45px;
+	display:flex;
+	margin-top:15%;
+}
+
+#projectstitle{
+	float:left;
+}
+
+
+#server{
+	height:17%;
+	background-color: #373a3c;
+	display:flex;
+	align-items:center
+}
+
+#server p{
+	color:#ffffff;
+	font-size: 60px;
+    font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+#serverdesc{
+	font-size:30px !important;
+	font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: 100;
+	color: #b0b0b0 !important;
+
+}
+
+#server .glyphicon{
+	font-size: 45px;
+	display:flex;
+	margin-top:15%;
+}
+
+#servertitle{
+	float:left;
+}
+
 
 #leaguegg{
 	height: 50%;
 	width: 100%;
-	background-image: url(https://d3kq2xhl2rew87.cloudfront.net/lan_event/background_image/0/1/6/lol_worlds_main_bg_PEu6A3H.jpg);
-	background-color: #373a3c;
-	border-top: solid 2px #ffffff;
+	background-color: #333;
 	color: #ffffff;
 	font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
 }
