@@ -60,7 +60,7 @@ $(document).on('click','#topnavbutton', function(event) {
 
 <div class="container" id="container">
 
-<div class="top" id="top">
+<div class="topcontainer" id="top">
 
 <div class="navbar navbar-inverse transparent navbar-fixed-top navbar-custom " >
   <div class="container-fluid">
@@ -110,7 +110,7 @@ $(document).on('click','#topnavbutton', function(event) {
 
 <span id="centerbanner">
 		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
-		<p>A Professional Coder | GFX | VFX | Web Designer</p>
+		<p>A <span style="color: orange;">Professional</span> Coder | GFX | VFX | Web Designer</p>
 
 <script language="javascript"> 
 function toggle() {
@@ -143,8 +143,47 @@ function toggle() {
 
  
 <div id="contactinfo" >
-<p> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  contact@sprux.pro </p>
+ <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button"
+          title="Copy to Clipboard">
+          <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          <span> contact@sprux.pro </span>
+          </p>
+</button>
 </div>
+
+<script>
+$(document).ready(function() {
+  // Initialize the tooltip.
+  $('#copy-button').tooltip();
+
+  // When the copy button is clicked, select the value of the text box, attempt
+  // to execute the copy command, and trigger event to update tooltip message
+  // to indicate whether the text was successfully copied.
+  $('#copy-button').bind('click', function() {
+    var input = document.querySelector('#copy-input');
+    input.setSelectionRange(0, input.value.length + 1);
+    try {
+      var success = document.execCommand('copy');
+      if (success) {
+        $('#copy-button').trigger('copied', ['Copied!']);
+      } else {
+        $('#copy-button').trigger('copied', ['Copy with Ctrl-c']);
+      }
+    } catch (err) {
+      $('#copy-button').trigger('copied', ['Copy with Ctrl-c']);
+    }
+  });
+
+  // Handler for updating the tooltip message.
+  $('#copy-button').bind('copied', function(event, message) {
+    $(this).attr('title', message)
+        .tooltip('fixTitle')
+        .tooltip('show')
+        .attr('title', "Copy to Clipboard")
+        .tooltip('fixTitle');
+  });
+});
+</script>
 
 <script>
 $(document).on('click','#button', function(event) {
@@ -158,10 +197,11 @@ $(document).on('click','#button', function(event) {
 <div id="button" data-target="leaguegg">
 <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
 </div>
+
 	</div>
 </div>
 
-<div id="container-fluid ">
+<div id="container-fluid" class="containerprojects">
 	<div id="projects">
 		<div class="row-fluid" style="width:100%;">
 				<div class="col-md-12">
