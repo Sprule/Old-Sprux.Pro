@@ -3,8 +3,16 @@ A place to showcase and display all my work, what I do, and where you can find m
 
 <h2> Projects - </h2>
 <ul style="list-style: none;">
-<a href="http://league.gg"><li> League.gg </li></a>
-<a href="http://Orbis.io"><li> Orbis.io </li></a>
+<li> League.gg </li>
+  <ul>
+ <a href="https://github.com/Sprule/League.gg"> <li> Github </li> </a>
+<a href="http://league.gg"><li> Website </li></a>
+  </ul>
+<li> Orbis.io </li>
+  <ul>
+<a href="https://github.com/Sprule/Orbis.io"> <li> Github </li> </a>
+<a href="http://Orbis.io"><li> Website </li></a>
+  </ul>
 </ul>
 
 <h2> Minecraft Server - </h2>
