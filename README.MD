@@ -3,7 +3,7 @@ A place to showcase and display all my work, what I do, and where you can find m
 
 <h2> Projects - </h2>
 <ul>
-<a href="http://league.gg><li> League.gg </li></a>
+<a href="http://league.gg"><li> League.gg </li></a>
 <a href="http://Orbis.io><li> Orbis.io </li></a>
 </ul>
 
