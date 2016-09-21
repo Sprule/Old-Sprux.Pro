@@ -1,4 +1,4 @@
-<a href="http://Sprux.pro"> #Sprux.pro </a>
+<a href="http://Sprux.pro"> <h1> Sprux.pro </h1> </a>
 A place to showcase and display all my work, what I do, and where you can find me.
 
 <h2> Projects - </h2>
