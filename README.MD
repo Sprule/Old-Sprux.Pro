@@ -3,12 +3,12 @@ A place to showcase and display all my work, what I do, and where you can find m
 
 <h2> Projects - </h2>
 <ul style="list-style: none;">
-<li> League.gg </li>
+<li> League.gg - League of Legends Advanced Name Checker</li>
   <ul>
  <a href="https://github.com/Sprule/League.gg"> <li> Github </li> </a>
 <a href="http://league.gg"><li> Website </li></a>
   </ul>
-<li> Orbis.io </li>
+<li> Orbis.io - Maplestory Advanced Name Checker</li>
   <ul>
 <a href="https://github.com/Sprule/Orbis.io"> <li> Github </li> </a>
 <a href="http://Orbis.io"><li> Website </li></a>
