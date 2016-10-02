@@ -61,11 +61,68 @@ $(document).on('click','#topnavbutton', function(event) {
 
 <div class="container" id="container">
 
-<a> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" > </span> </a>
+<script>
+  var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3', 'music/broccoli.mp3'];
+  
+  //Grabs a random image link.
+  function randomAudio() {
+    var audioSrc = audio[Math.floor(Math.random() * audio.length)];
+    return audioSrc;
+  }
 
-<a> <span id="soundup" class="glyphicon glyphicon-volume-up" style="" > </span> </a>
+  var audioChosen = randomAudio();
 
-<a> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" > </span> </a>
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ audioChosen +"";
+  });
+
+function audioName(){
+  var audioDesc = "test failed";
+
+  if(randomAudio().equals(audio[0])){
+    audioDesc = "Kid Cudi- THE PRAYER";
+  } else if (randomAudio().equals(audio[1])) {
+    audioDesc = "50 cent - In Da Club (LILLE RemiXx)";
+  } else if (randomAudio().equals(audio[2])) {
+    audioDesc = "Samuel - Cinema (Neutre Edition)";
+  } else if (randomAudio().equals(audio[3])) {
+    audioDesc = "Abstract - Neverland (ft. Ruth B) (Prod. Blulake)";
+  } else if (randomAudio().equals(audio[4])) {
+    audioDesc = "BROCCOLI feat. Lil Yachty (Prod By. J Gramm)";
+  }
+ 
+  return audioDesc;
+}
+
+</script>
+
+<div>
+<audio  id="myTune" src="music/words.mp3" preload="auto">
+</audio>
+
+<div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
+
+
+<script>
+function aud_play_pause() {
+  var myAudio = document.getElementById("myTune");
+  if (myAudio.paused) {
+    myAudio.play();
+    myAudio.volume = 0.6;
+    document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
+
+    $('#playbutton').css("padding-right", "90px");
+    document.getElementById("playbutton").innerHTML = ""+ audioName() +"";
+
+  } else {
+    myAudio.pause();
+    document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
+    $('#playbutton').css("padding-right", "");
+ 
+  }
+}
+</script>
+</div>
 
  <div class="topcontainer" id="top">
 
@@ -90,6 +147,7 @@ $(document).on('click','#topnavbutton', function(event) {
         <li id="topnavbutton" data-target="leaguegg"  ><a  href="#leaguegg">League.gg</a></li>
         <li id="topnavbutton" data-target="orbisio" ><a  href="#orbisio">Orbis.io</a></li>
         <li id="topnavbutton" data-target="lumixcraft" ><a  href="#lumixcraft">LumixCraft</a></li>
+        </ul>
 
      <ul class="nav navbar-nav navbar-right">
 
