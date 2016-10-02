@@ -598,6 +598,32 @@ input:focus, textarea:focus {
 
 }
 
+@media only screen and (max-width: 544px) {
+    .banner p {
+	color: #ffffff;
+	font-size: 20px;
+	font-weight:100;
+	float: center;
+	text-align: center;
+	margin: auto;
+    }
+ }
+
+
+@media only screen and (max-width: 544px) {
+    .banner h2 {
+	color: #ffffff;
+	font-size: 60px;
+	letter-spacing: 30px;
+	padding:8px;
+	float: center;
+	text-align: center;
+	margin-left:25px;
+    }    
+}
+
+
+
 #bannerarrow{
 	font-size: 35px;
 	align-content: center;
@@ -610,12 +636,29 @@ input:focus, textarea:focus {
 	-webkit-transition: margin 0.2s ease-out;
     -moz-transition: margin 0.2s ease-out;
     -o-transition: margin 0.2s ease-out;
+    position: relative;
 }
 
 #bannerarrow:hover {
  	-webkit-transition: opacity .1s ease;
  	cursor:pointer;
     margin-top: 235px;
+	}
+
+#playbutton{
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:3%;
+	text-shadow: 0 0px #000000;
+	color: white;
+	opacity: 0.75;
+	margin-left:3.5%;
+	border: black 2px;
+	padding: 5.5px;
+	background-color: rgba(0, 0, 0, 0.6);
+
+ 
 	}
 
 #video-background {
@@ -650,6 +693,7 @@ input:focus, textarea:focus {
 	color: #222;
 	position: relative;
 	overflow: hidden;
+
 
 }
 
@@ -702,6 +746,8 @@ p {
 	font-size: 30px;
 	font-weight:100;
 }
+
+
 
 .banner a {
 	color: #00FFAA;

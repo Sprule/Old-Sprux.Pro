@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
   </head>
-<body data-spy="scroll" data-target=".navbar-custom" data-offset="50">
+<body data-spy="scroll" data-target=".navbar-custom" data-offset="150">
 <script>
 	$('body').scrollspy({ target: '.navbar-custom' });
 </script>
@@ -58,11 +58,18 @@ $(document).on('click','#topnavbutton', function(event) {
 });
 </script>
 
+
 <div class="container" id="container">
 
-<div class="topcontainer" id="top">
+<a> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" > </span> </a>
 
-<div class="navbar navbar-inverse transparent navbar-fixed-top navbar-custom " >
+<a> <span id="soundup" class="glyphicon glyphicon-volume-up" style="" > </span> </a>
+
+<a> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" > </span> </a>
+
+ <div class="topcontainer" id="top">
+
+ <div class="navbar navbar-inverse transparent navbar-fixed-top navbar-custom " >
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -83,14 +90,12 @@ $(document).on('click','#topnavbutton', function(event) {
         <li id="topnavbutton" data-target="leaguegg"  ><a  href="#leaguegg">League.gg</a></li>
         <li id="topnavbutton" data-target="orbisio" ><a  href="#orbisio">Orbis.io</a></li>
         <li id="topnavbutton" data-target="lumixcraft" ><a  href="#lumixcraft">LumixCraft</a></li>
-        
- </ul>
 
      <ul class="nav navbar-nav navbar-right">
 
-<li id="twitterfollow"><a href="https://twitter.com/Spruxs" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @Spruxs</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8" ></script>
+ <li id="twitterfollow"><a href="https://twitter.com/Spruxs" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @Spruxs</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8" ></script>
 
-</li>
+ </li>
 
     </ul>
 
@@ -100,20 +105,25 @@ $(document).on('click','#topnavbutton', function(event) {
 	</div>
 
 
-<div class="container" id="bannercontainer">
+ <div class="container" id="bannercontainer">
 	<div class="banner">
-<!--
- <video autoplay loop id="video-background" muted>
-  <source src="video.mp4" type="video/mp4">
-</video>
--->
+      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
 
-<span id="centerbanner">
+  <div class="col-sm-12">
+  <span id="centerbanner">
 		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
-		<p>A <span style="color: orange;">Professional</span> Coder | GFX | VFX | Web Designer</p>
+    </div>
+    </div>
 
-<script language="javascript"> 
-function toggle() {
+
+     <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
+		<p>A <span style="color: orange;">Professional</span> Coder | GFX | VFX | Web Designer</p>
+  </div>
+  </div>
+
+  <script language="javascript"> 
+  function toggle() {
 	var text = document.getElementById("displaycontact");
 	var ele = document.getElementById("contactinfo");
 	if(text.style.display == "inline") {
@@ -126,11 +136,12 @@ function toggle() {
 		text.style.display = "inline";
 		ele.style.display = "none";
 
-	}
-} 
-</script>
+	 }
+ } 
+  </script>
 
-
+      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
 	<a id="displaycontact" href="javascript:toggle();" style="display:inline;"> <button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-globe" style="color:white" value='hide/show' > </span> Contact Now </button> </a>
 
 	<a data-text="Why is SPRUX SO COOL! xd" data-url="http://sprux.pro/" data-via="Spruxs" via="Spruxs" data-hashtags="Sprux" data-show-count="false" href="https://twitter.com/intent/tweet?text=@Sprux%20-%20http://sprux.pro/%20-%20Why%20is%20Sprux%20so%20cool!%20xd" class="" >	
@@ -142,17 +153,17 @@ function toggle() {
 		</span>
 
  
-<div id="contactinfo" >
+ <div id="contactinfo" >
  <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button"
           title="Copy to Clipboard">
           <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
           <span> contact@sprux.pro </span>
           </p>
-</button>
-</div>
+ </button>
+ </div>
 
-<script>
-$(document).ready(function() {
+ <script>
+ $(document).ready(function() {
   // Initialize the tooltip.
   $('#copy-button').tooltip();
 
@@ -182,26 +193,41 @@ $(document).ready(function() {
         .attr('title', "Copy to Clipboard")
         .tooltip('fixTitle');
   });
-});
-</script>
+ });
+ </script>
 
-<script>
-$(document).on('click','#button', function(event) {
+ <script>
+ $(document).on('click','#button', function(event) {
     event.preventDefault();
     var target = "#" + this.getAttribute('data-target');
     $('html, body').animate({
         scrollTop: $(target).offset().top
     }, 1200);
-});
-</script>
-<div id="button" data-target="leaguegg">
-<a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
-</div>
+ });
+ </script>
+ </div>
+ </div>
 
-	</div>
-</div>
 
-<div id="container-fluid" class="containerprojects">
+      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
+
+ <div id="button" data-target="leaguegg">
+ <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
+
+
+ </div>
+ </div>
+ </div>
+
+	</div> <!-- banner -->
+
+  </div> <!-- banner container -->
+
+
+
+
+ <div id="container-fluid" class="containerprojects">
 	<div id="projects">
 		<div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
 				<div class="col-sm-12">
@@ -213,9 +239,9 @@ $(document).on('click','#button', function(event) {
 	<p id="projectsdesc" style="font-weight: 1;"> All the projects that I'm working on  </p>
 		<p id="projectsdesc" style="font-weight: 1;"> 
 
-<button class="btn btn-primary" type="button">
+ <button class="btn btn-primary" type="button">
  League.gg
-</button>
+ </button>
 
 <button class="btn btn-primary" type="button" ">
  Orbis.io
