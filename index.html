@@ -64,13 +64,15 @@ $(document).on('click','#topnavbutton', function(event) {
 <script>
   var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3', 'music/broccoli.mp3'];
   
+  var audioChosen;
+
   //Grabs a random image link.
   function randomAudio() {
     var audioSrc = audio[Math.floor(Math.random() * audio.length)];
     return audioSrc;
   }
 
-  var audioChosen = randomAudio();
+  audioChosen = randomAudio();
 
   $( document ).ready(function(){
     document.getElementById("myTune").src = ""+ audioChosen +"";
@@ -111,7 +113,7 @@ function aud_play_pause() {
     myAudio.volume = 0.6;
     document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
 
-    $('#playbutton').css("padding-right", "90px");
+    // $('#playbutton').css("padding-right", "90px");
     document.getElementById("playbutton").innerHTML = ""+ audioName() +"";
 
   } else {
