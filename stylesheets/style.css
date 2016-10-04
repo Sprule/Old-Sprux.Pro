@@ -687,6 +687,7 @@ input:focus, textarea:focus {
 	padding: 5.5px;
 	background-color: rgba(0, 0, 0, 0.6);
 	display: block-inline;
+
 	}
 
 #songname{
@@ -700,6 +701,69 @@ input:focus, textarea:focus {
 	opacity: 0.75;
 	margin-left:7.5%;
 	}
+
+@media only screen and (max-width: 1420px) {
+ #soundbutton{
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:1.7%;
+	border: black 2px;
+	padding: 4px;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: block-inline;
+	font-size: 12px;
+	}	
+
+#playbutton{
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:3.5%;
+	border: black 2px;
+	padding: 4px;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: block-inline;
+	font-size: 12px;	
+	}
+
+#skipbutton{
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:5.3%;
+	border: black 2px;
+	padding: 4px;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: block-inline;
+	font-size: 12px;	
+	}
+
+#songname{
+	font-size: 16px;
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:7.5%;
+	font-size: 12px;	
+	}
+}
 
 #video-background {
 /*  making the video fullscreen  */
