@@ -656,8 +656,20 @@ input:focus, textarea:focus {
 	border: black 2px;
 	padding: 5.5px;
 	background-color: rgba(0, 0, 0, 0.6);
+	}
 
- 
+#skipbutton{
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:5.3%;
+	border: black 2px;
+	padding: 5.5px;
+	background-color: rgba(0, 0, 0, 0.6);
 	}
 
 #video-background {

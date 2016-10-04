@@ -61,8 +61,51 @@ $(document).on('click','#topnavbutton', function(event) {
 
 <div class="container" id="container">
 
+<div>
+<audio  id="myTune" src="music/words.mp3" preload="auto">
+</audio>
+
+<div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
+
+<div id="button"><a onclick="aud_next_song()"> <span id="skipbutton" class="glyphicon glyphicon-fast-forward" style="" >  </span> </a> </div>
+
+
 <script>
-  var audio = ['music/words.mp3', 'music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3'];
+var myAudio = document.getElementById("myTune");
+var nextAudio;
+function aud_play_pause() {
+  if (myAudio.paused) {
+    myAudio.play();
+    myAudio.volume = 0.5;
+    document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
+
+    // $('#playbutton').css("padding-right", "90px");
+    document.getElementById("playbutton").innerHTML = ""+ audioName() +"";
+
+  } else {
+    myAudio.pause();
+    document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
+    $('#playbutton').css("padding-right", "");
+ 
+  }
+}
+
+function aud_next_song() {
+myAudio.pause();
+
+nextAudio = randomAudio();
+
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+
+myAudio.play();
+}
+
+</script>
+
+<script>
+  var audio = ['music/words.mp3', 'music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3'];
   
   var audioChosen;
 
@@ -95,35 +138,8 @@ function audioName(){
  
   return audioDesc;
 }
-
 </script>
 
-<div>
-<audio  id="myTune" src="music/words.mp3" preload="auto">
-</audio>
-
-<div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
-
-
-<script>
-function aud_play_pause() {
-  var myAudio = document.getElementById("myTune");
-  if (myAudio.paused) {
-    myAudio.play();
-    myAudio.volume = 0.5;
-    document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
-
-    // $('#playbutton').css("padding-right", "90px");
-    document.getElementById("playbutton").innerHTML = ""+ audioName() +"";
-
-  } else {
-    myAudio.pause();
-    document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
-    $('#playbutton').css("padding-right", "");
- 
-  }
-}
-</script>
 </div>
 
  <div class="topcontainer" id="top">
