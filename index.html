@@ -26,7 +26,9 @@
 
 
 <script>
-	var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://i.imgur.com/fmzDAG1.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png', 'http://static.planetminecraft.com/files/resource_media/screenshot/1238/2012-09-20_011855_3635514.jpg', 'http://upload.fr-minecraft.net/images/frminecraft/fr-minecraft_4ZUY_5ajgctz.jpg', 'http://i.imgur.com/v3SqErA.png', 'http://vignette2.wikia.nocookie.net/biomesoplenty/images/e/e9/RedwoodShader.png/revision/latest?cb=20140529175722'];
+	//var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://i.imgur.com/fmzDAG1.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png', 'http://static.planetminecraft.com/files/resource_media/screenshot/1238/2012-09-20_011855_3635514.jpg', 'http://upload.fr-minecraft.net/images/frminecraft/fr-minecraft_4ZUY_5ajgctz.jpg', 'http://i.imgur.com/v3SqErA.png', 'http://vignette2.wikia.nocookie.net/biomesoplenty/images/e/e9/RedwoodShader.png/revision/latest?cb=20140529175722']; //
+
+  var images = ['http://i.imgur.com/cYUKBFt.jpg', 'http://i.imgur.com/e1F6t02.jpg', 'http://i.imgur.com/IqlYjz4.jpg', 'http://i.imgur.com/P4o4w6a.jpg', 'http://i.imgur.com/1pMire6.jpg', 'http://wallpaper.zone/img/377599.jpg', 'http://i.imgur.com/9XauTR6.jpg', 'http://i.imgur.com/5BcJr5n.jpg']
 	
 	//Grabs a random image link.
 	function randomHeaderImage() {
@@ -74,6 +76,7 @@ $(document).on('click','#topnavbutton', function(event) {
 var myAudio = document.getElementById("myTune");
 var nextAudio;
 function aud_play_pause() {
+
   if (myAudio.paused) {
     myAudio.play();
     myAudio.volume = 0.5;
@@ -88,6 +91,16 @@ function aud_play_pause() {
     $('#playbutton').css("padding-right", "");
  
   }
+
+  nextAudio = randomAudio();
+
+myAudio.addEventListener("ended", function(){
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+     console.log("ended");
+});
+
 }
 
 function aud_next_song() {
@@ -100,6 +113,20 @@ nextAudio = randomAudio();
   });
 document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
 myAudio.play();
+}
+
+function aud_new_song() {
+
+nextAudio = randomAudio();
+
+if (myAudio.ended = true)
+{
+    $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+    myAudio.play();
+}
+
 }
 
 </script>
