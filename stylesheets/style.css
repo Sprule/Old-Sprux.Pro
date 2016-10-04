@@ -644,6 +644,21 @@ input:focus, textarea:focus {
     margin-top: 235px;
 	}
 
+#soundbutton{
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:1.7%;
+	border: black 2px;
+	padding: 5.5px;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: block-inline;
+	}	
+
 #playbutton{
 	z-index: 4;
 	position:fixed; 
@@ -656,6 +671,7 @@ input:focus, textarea:focus {
 	border: black 2px;
 	padding: 5.5px;
 	background-color: rgba(0, 0, 0, 0.6);
+	display: block-inline;
 	}
 
 #skipbutton{
@@ -670,6 +686,19 @@ input:focus, textarea:focus {
 	border: black 2px;
 	padding: 5.5px;
 	background-color: rgba(0, 0, 0, 0.6);
+	display: block-inline;
+	}
+
+#songname{
+	font-size: 16px;
+	z-index: 4;
+	position:fixed; 
+	top: 95%;	
+	left:0%;
+	text-shadow: 0 0px;
+	color: white;
+	opacity: 0.75;
+	margin-left:7.5%;
 	}
 
 #video-background {

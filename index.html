@@ -63,74 +63,6 @@ $(document).on('click','#topnavbutton', function(event) {
 
 <div class="container" id="container">
 
-<div>
-<audio  id="myTune" src="music/words.mp3" preload="auto">
-</audio>
-
-<div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
-
-<div id="button"><a onclick="aud_next_song()"> <span id="skipbutton" class="glyphicon glyphicon-fast-forward" style="" >  </span> </a> </div>
-
-
-<script>
-var myAudio = document.getElementById("myTune");
-var nextAudio;
-function aud_play_pause() {
-
-  if (myAudio.paused) {
-    myAudio.play();
-    myAudio.volume = 0.5;
-    document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
-
-    // $('#playbutton').css("padding-right", "90px");
-    document.getElementById("playbutton").innerHTML = ""+ audioName() +"";
-
-  } else {
-    myAudio.pause();
-    document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
-    $('#playbutton').css("padding-right", "");
- 
-  }
-
-  nextAudio = randomAudio();
-
-myAudio.addEventListener("ended", function(){
-  $( document ).ready(function(){
-    document.getElementById("myTune").src = ""+ nextAudio +"";
-  });
-     console.log("ended");
-});
-
-}
-
-function aud_next_song() {
-myAudio.pause();
-
-nextAudio = randomAudio();
-
-  $( document ).ready(function(){
-    document.getElementById("myTune").src = ""+ nextAudio +"";
-  });
-document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
-myAudio.play();
-}
-
-function aud_new_song() {
-
-nextAudio = randomAudio();
-
-if (myAudio.ended = true)
-{
-    $( document ).ready(function(){
-    document.getElementById("myTune").src = ""+ nextAudio +"";
-  });
-    myAudio.play();
-}
-
-}
-
-</script>
-
 <script>
   var audio = ['music/words.mp3', 'music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3'];
   
@@ -148,24 +80,199 @@ if (myAudio.ended = true)
     document.getElementById("myTune").src = ""+ audioChosen +"";
   });
 
-function audioName(){
-  var audioDesc = "test failed";
+function audioLocation(){
+  var audioC = audioChosen;
+  return audioC;
+}
 
-  if(audioChosen.equals(audio[0])){
+function audioArrayLength(){
+  var arrayLength = audio.length;
+  return arrayLength;
+}
+
+</script>
+
+<div>
+
+<audio  id="myTune" src="music/words.mp3" preload="auto">
+</audio>
+
+
+<div id="button"><a onclick="aud_sound_change()"> <span id="soundbutton" class="glyphicon glyphicon-volume-up" style="" >  </span> </a> </div>
+
+<div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
+
+
+
+<div id="button"><a onclick="aud_next_song()"> <span id="skipbutton" class="glyphicon glyphicon-fast-forward" style="" >  </span> </a> </div>
+
+
+
+<p id="songname"></p>
+
+
+<script>
+  var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/words.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3'];
+var myAudio = document.getElementById("myTune");
+var nextAudio;
+var audioChosen = audioLocation();
+var audioDesc;
+
+function aud_sound_change(){
+
+  if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up")
+ {
+  document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-down";
+  myAudio.volume = 0.3;
+  return;
+ } 
+
+
+  if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-down")
+ {
+  document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-off";
+  myAudio.volume = 0;
+  return;
+ }
+
+  if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-off")
+ {
+  document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up";
+  myAudio.volume = 0.5;
+  return;
+ } 
+
+}
+
+function aud_play_pause() {
+
+  if (myAudio.paused) {
+    myAudio.play();
+    myAudio.volume = 0.5;
+    document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
+    document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up"
+      if(audioChosen == (audio[0])){
     audioDesc = "Kid Cudi- THE PRAYER";
-  } else if (audioChosen.equals(audio[1])) {
+  } else if (audioChosen == (audio[1])) {
     audioDesc = "50 cent - In Da Club (LILLE RemiXx)";
-  } else if (audioChosen.equals(audio[2])) {
+  } else if (audioChosen == (audio[2])) {
     audioDesc = "Samuel - Cinema (Neutre Edition)";
-  } else if (audioChosen.equals(audio[3])) {
+  } else if (audioChosen == (audio[3])) {
     audioDesc = "Abstract - Neverland (ft. Ruth B) (Prod. Blulake)";
-  } else if (audioChosen.equals(audio[4])) {
+  } else if (audioChosen == (audio[4])) {
     audioDesc = "BROCCOLI feat. Lil Yachty (Prod By. J Gramm)";
+  } else if (audioChosen == (audio[5])) {
+    audioDesc = "Anna Gracemen - Words (mi Ka Flip)";
+  } else if (audioChosen == (audio[6])) {
+    audioDesc = "Andy Grammer 'Fresh Eyes'";
+  } else if (audioChosen == (audio[7])) {
+    audioDesc = "Astrid S - Hurts So Good";
+  } else if (audioChosen == (audio[8])) {
+    audioDesc = "Phoebe Ryan - Ignition / Do You... (R.Kelly / Miguel Cover)";
+  } else if (audioChosen == (audio[9])) {
+    audioDesc = "Cheat Codes & Dante Klein - Let Me Hold You (Turn Me On)";
+  } else if (audioChosen == (audio[10])) {
+    audioDesc = "DJ Snake - Middle (Audio) ft. Bipolar Sunshine";
+  } else if (audioChosen == (audio[11])) {
+    audioDesc = "Akon - Right Now";
+  } else if (audioChosen == (audio[12])) {
+    audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
+  } else if (audioChosen == (audio[13])) {
+    audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
+  } else {
+    audioDesc = "Song Name Not Found :("
   }
  
-  return audioDesc;
+
+    document.getElementById("songname").innerHTML = ""+ audioDesc +"";
+
+  } else {
+    myAudio.pause();
+    document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
+ 
+  }
+
+  nextAudio = randomAudio();
+
+myAudio.addEventListener("ended", function(){
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+     console.log("ended");
+});
+
 }
+
+function aud_next_song() {
+  myAudio.pause();
+
+  document.getElementById("songname").innerHTML = " ";
+
+  nextAudio = randomAudio();
+
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+  document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
+
+  myAudio.play();
+
+  if(nextAudio == (audio[0])){
+    audioDesc = "Kid Cudi- THE PRAYER";
+  } else if (nextAudio == (audio[1])) {
+    audioDesc = "50 cent - In Da Club (LILLE RemiXx)";
+  } else if (nextAudio == (audio[2])) {
+    audioDesc = "Samuel - Cinema (Neutre Edition)";
+  } else if (nextAudio == (audio[3])) {
+    audioDesc = "Abstract - Neverland (ft. Ruth B) (Prod. Blulake)";
+  } else if (nextAudio == (audio[4])) {
+    audioDesc = "BROCCOLI feat. Lil Yachty (Prod By. J Gramm)";
+  } else if (nextAudio == (audio[5])) {
+    audioDesc = "Anna Gracemen - Words (mi Ka Flip)";
+  } else if (nextAudio == (audio[6])) {
+    audioDesc = "Andy Grammer 'Fresh Eyes'";
+  } else if (nextAudio == (audio[7])) {
+    audioDesc = "Astrid S - Hurts So Good";
+  } else if (nextAudio == (audio[8])) {
+    audioDesc = "Phoebe Ryan - Ignition / Do You... (R.Kelly / Miguel Cover)";
+  } else if (nextAudio == (audio[9])) {
+    audioDesc = "Cheat Codes & Dante Klein - Let Me Hold You (Turn Me On)";
+  } else if (nextAudio == (audio[10])) {
+    audioDesc = "DJ Snake - Middle (Audio) ft. Bipolar Sunshine";
+  } else if (nextAudio == (audio[11])) {
+    audioDesc = "Akon - Right Now";
+  } else if (nextAudio == (audio[12])) {
+    audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
+  } else if (nextAudio == (audio[13])) {
+    audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
+  } else {
+    audioDesc = "Song Name Not Found :("
+  }
+ 
+  document.getElementById("songname").innerHTML = ""+ audioDesc +"";
+
+  audioChosen = nextAudio;
+
+}
+
+function aud_new_song() {
+
+nextAudio = randomAudio();
+
+if (myAudio.ended = true)
+{
+    $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+    myAudio.play();
+}
+
+}
+
+
+
 </script>
+
 
 </div>
 
