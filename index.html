@@ -64,7 +64,7 @@ $(document).on('click','#topnavbutton', function(event) {
 <div class="container" id="container">
 
 <script>
-  var audio = ['music/words.mp3', 'music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3'];
+  var audio = ['music/words.mp3', 'music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3', 'music/Am I Wrong.mp3', 'music/No Angels.mp3'];
   
   var audioChosen;
 
@@ -98,21 +98,18 @@ function audioArrayLength(){
 </audio>
 
 
+
 <div id="button"><a onclick="aud_sound_change()"> <span id="soundbutton" class="glyphicon glyphicon-volume-up" style="" >  </span> </a> </div>
 
 <div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
 
-
-
 <div id="button"><a onclick="aud_next_song()"> <span id="skipbutton" class="glyphicon glyphicon-fast-forward" style="" >  </span> </a> </div>
-
-
 
 <p id="songname"></p>
 
 
 <script>
-  var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/words.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3'];
+  var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/words.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3','music/Am I Wrong.mp3', 'music/No Angels.mp3'];
 var myAudio = document.getElementById("myTune");
 var nextAudio;
 var audioChosen = audioLocation();
@@ -138,7 +135,7 @@ function aud_sound_change(){
   if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-off")
  {
   document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up";
-  myAudio.volume = 0.5;
+  myAudio.volume = 0.4;
   return;
  } 
 
@@ -148,7 +145,7 @@ function aud_play_pause() {
 
   if (myAudio.paused) {
     myAudio.play();
-    myAudio.volume = 0.5;
+    myAudio.volume = 0.4;
     document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
     document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up"
       if(audioChosen == (audio[0])){
@@ -179,6 +176,10 @@ function aud_play_pause() {
     audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
   } else if (audioChosen == (audio[13])) {
     audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
+  } else if (audioChosen == (audio[14])) {
+    audioDesc = "Nico & Vinz - Am I Wrong";
+  } else if (audioChosen == (audio[15])) {
+    audioDesc = "Bastille - No Angels (Stacie Todd 2015 Rework)";
   } else {
     audioDesc = "Song Name Not Found :("
   }
@@ -216,7 +217,8 @@ function aud_next_song() {
   document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
 
   myAudio.play();
-
+  myAudio.volume = 0.4;
+  
   if(nextAudio == (audio[0])){
     audioDesc = "Kid Cudi- THE PRAYER";
   } else if (nextAudio == (audio[1])) {
@@ -245,6 +247,10 @@ function aud_next_song() {
     audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
   } else if (nextAudio == (audio[13])) {
     audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
+  } else if (audioChosen == (audio[14])) {
+    audioDesc = "Nico & Vinz - Am I Wrong";
+  } else if (audioChosen == (audio[15])) {
+    audioDesc = "Bastille - No Angels (Stacie Todd 2015 Rework)";
   } else {
     audioDesc = "Song Name Not Found :("
   }

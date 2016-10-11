@@ -644,11 +644,23 @@ input:focus, textarea:focus {
     margin-top: 235px;
 	}
 
+#musicbuttons div + div{
+	margin-left:10px;
+}
+
+#musicbuttons{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	float: left;
+	white-space: nowrap;
+}
+
 #soundbutton{
 	z-index: 4;
 	position:fixed; 
-	top: 95%;	
-	left:0%;
+	top: 95%;
+	left: 0%;	
 	text-shadow: 0 0px;
 	color: white;
 	opacity: 0.75;
@@ -656,14 +668,14 @@ input:focus, textarea:focus {
 	border: black 2px;
 	padding: 5.5px;
 	background-color: rgba(0, 0, 0, 0.6);
-	display: block-inline;
+	display: inline-block;
 	}	
 
 #playbutton{
 	z-index: 4;
 	position:fixed; 
 	top: 95%;	
-	left:0%;
+	left: 0%;
 	text-shadow: 0 0px;
 	color: white;
 	opacity: 0.75;
@@ -671,14 +683,14 @@ input:focus, textarea:focus {
 	border: black 2px;
 	padding: 5.5px;
 	background-color: rgba(0, 0, 0, 0.6);
-	display: block-inline;
+	display: inline-block;
 	}
 
 #skipbutton{
 	z-index: 4;
 	position:fixed; 
-	top: 95%;	
-	left:0%;
+	top: 95%;
+	left: 0%;
 	text-shadow: 0 0px;
 	color: white;
 	opacity: 0.75;
