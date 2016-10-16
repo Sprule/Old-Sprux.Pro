@@ -1,9 +1,148 @@
 <!DOCTYPE html>
-  <head>
-  
+ <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
+    <link rel='stylesheet' href='stylesheets/styleleaguegg.css' />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
   </head>
-  <body>
-  
+
+<body data-spy="scroll" data-target=".navbar-custom" data-offset="150">
+<script>
+	$('body').scrollspy({ target: '.navbar-custom' });
+</script>
+
+<div class="background-overlay fadein"></div>
+
+   <div class="topcontainer" id="top">
+
+ <div class="navbar navbar-inverse transparent navbar-custom " >
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+  <a class="navbar-brand" href="#top"><img id="navlogo" src="Images/leaguelogo.png" alt="Sprux" class="pull-left" height="96px"> </img> </a> 
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" >
+        <li class="active" id="topnavbutton" data-target="bannercontainer"  ><a href="#bannercontainer">Home</a></li>
+        <li id="topnavbutton" data-target="leaguegg"  ><a  href="#leaguegg">Upcoming Names</a></li>
+        <li id="topnavbutton" data-target="orbisio" ><a  href="#orbisio">Recent Names</a></li>
+        <li id="topnavbutton" data-target="lumixcraft" ><a  href="#lumixcraft">Skins</a></li>
+        <li id="topnavbutton" data-target="lumixcraft" ><a  href="#lumixcraft">Icons</a></li>
+        </ul>
+
+     <ul class="nav navbar-nav navbar-right">
+
+ <li id="twitterfollow"><a href="https://twitter.com/Spruxs" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @Spruxs</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8" ></script>
+
+ </li>
+
+    </ul>
+
+	   </div> <!-- .navbar-collpase -->
+	  </div><!-- /.container-fluid -->
+     </div><!-- /.navbar -->
+
+<div class="banner">
+
+<div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+  <div class="col-sm-12">
+<h1> <span style="text-decoration: underline;">L</span>eague.gg </h1>
+</div>
+</div>
+
+<div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+  <div class="col-sm-12">
+  <h2 style="color:#333333;"> A League of Legends Name Checker </h2>
+  </div>
+  </div>
+
+  <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+  <div class="col-sm-12">
+  <h6  style="color:gold; font-weight: bolder;"> Player Names / Teams / Clubs </h3>
+  </div>
+  </div>
+
+
+  <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+  <div class="col-sm-12">
+
+  <div class="container-1">
+  <span class="icon"><i class=fa fa-search></i></span>
+  <input id="searchbox" type="search" placeholder="Search Names" >
+</div>
+
+  </div>
+  </div>
+
+
+</div>
+
+
+	</div> <!-- .topcontainer -->
+
+<div class="container" id="recentnames">
+
+</div>
+
+<div class="container" id="info">
+
+</div>
+
+        <footer>
+            <div class="container">
+            <div class="col-md-4">
+                <div class="row">
+               
+                	<ul>
+                		<li id="Twitter"> <a href="https://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="35" width="35"> </a> </li>
+
+						<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="35" width="35" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="35" width="35" >  </a> </li>
+
+						<li id="Github"> <a href="https://github.com/Sprule"> <img height="35" width="35" src="http://www.measurementjs.com/icon-images/github-icon.png" height="35" width="35" >  </a> </li>
+                	</ul>
+                    </div>
+                <div class="row">
+                    <div class="text-left">
+                    <p id="footerlogo"> League.gg </p>
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="text-left">
+                    <p id="copyright"> &copy; 2016 League.gg </p>                	
+                	</div>
+                </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                </div>
+
+                </div>
+            </div>
+        </footer>
   </body>
   
+
   </html>
