@@ -99,7 +99,7 @@ function audioArrayLength(){
 
 
 
-<div id="button"><a onclick="aud_sound_change()"> <span id="soundbutton" class="glyphicon glyphicon-volume-up" style="" >  </span> </a> </div>
+<div id="button"><a onclick="aud_sound_change()"> <span id="soundbutton" class="glyphicon glyphicon-volume-up" style="border-bottom: 1px" >  </span> </a> </div>
 
 <div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
 
@@ -110,36 +110,13 @@ function audioArrayLength(){
 
 <script>
   var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/words.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3','music/Am I Wrong.mp3', 'music/No Angels.mp3'];
+
 var myAudio = document.getElementById("myTune");
 var nextAudio;
 var audioChosen = audioLocation();
 var audioDesc;
+var audioLength = audioChosen.duration;
 
-function aud_sound_change(){
-
-  if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up")
- {
-  document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-down";
-  myAudio.volume = 0.3;
-  return;
- } 
-
-
-  if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-down")
- {
-  document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-off";
-  myAudio.volume = 0;
-  return;
- }
-
-  if (document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-off")
- {
-  document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up";
-  myAudio.volume = 0.4;
-  return;
- } 
-
-}
 
 function aud_play_pause() {
 
@@ -181,11 +158,33 @@ function aud_play_pause() {
   } else if (audioChosen == (audio[15])) {
     audioDesc = "Bastille - No Angels (Stacie Todd 2015 Rework)";
   } else {
-    audioDesc = "Song Name Not Found :("
+    audioDesc = "Song Name Not Found :("    
   }
- 
+
 
     document.getElementById("songname").innerHTML = ""+ audioDesc +"";
+
+
+
+
+/*
+    for(var i = 0; i < 16; i++)
+    {
+      for(var j = audioChosen.currentTime; j == audioChosen.duration; j++)
+      {
+
+      if(j++ == audioChosen.duration){
+        nextAudio = randomAudio();
+        audioChosen = nextAudio;
+        nextAudio.play();
+        break;
+      }
+
+      j = audioChosen.currentTime;
+      
+    }
+    }
+*/
 
   } else {
     myAudio.pause();
@@ -193,14 +192,6 @@ function aud_play_pause() {
  
   }
 
-  nextAudio = randomAudio();
-
-myAudio.addEventListener("ended", function(){
-  $( document ).ready(function(){
-    document.getElementById("myTune").src = ""+ nextAudio +"";
-  });
-     console.log("ended");
-});
 
 }
 
@@ -247,9 +238,9 @@ function aud_next_song() {
     audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
   } else if (nextAudio == (audio[13])) {
     audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
-  } else if (audioChosen == (audio[14])) {
+  } else if (nextAudio == (audio[14])) {
     audioDesc = "Nico & Vinz - Am I Wrong";
-  } else if (audioChosen == (audio[15])) {
+  } else if (nextAudio == (audio[15])) {
     audioDesc = "Bastille - No Angels (Stacie Todd 2015 Rework)";
   } else {
     audioDesc = "Song Name Not Found :("
@@ -276,6 +267,31 @@ if (myAudio.ended = true)
 }
 
 
+function aud_sound_change(){
+
+  var but = document.getElementById('soundbutton');
+
+  if (but.className == "glyphicon glyphicon-volume-up" )
+ {
+  but.className = "glyphicon glyphicon-volume-down";
+
+  myAudio.volume = 0.2;
+  } else if (but.className == "glyphicon glyphicon-volume-down")
+ {
+  but.className = "glyphicon glyphicon-volume-off";
+
+  myAudio.volume = 0;
+
+ } else if (but.className == "glyphicon glyphicon-volume-off")
+ {
+  but.className = "glyphicon glyphicon-volume-up";
+
+  myAudio.volume = 0.4;
+
+ } 
+
+
+}
 
 </script>
 
@@ -367,49 +383,41 @@ if (myAudio.ended = true)
 	</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 		</span>
-
- 
- <div id="contactinfo" >
- <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button"
-          title="Copy to Clipboard">
-          <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <span> contact@sprux.pro </span>
-          </p>
- </button>
+ </div>
  </div>
 
+     <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+     <div class="col-sm-12">
+ <div id="contactinfo" >
+ <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button" title="Copy to Clipboard" onclick="copyText()">
+          <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          <span id="email"> contact@sprux.pro </span>
+          </p>
+ </button>
+</div>
+</div>
+
+
  <script>
- $(document).ready(function() {
-  // Initialize the tooltip.
-  $('#copy-button').tooltip();
 
-  // When the copy button is clicked, select the value of the text box, attempt
-  // to execute the copy command, and trigger event to update tooltip message
-  // to indicate whether the text was successfully copied.
-  $('#copy-button').bind('click', function() {
-    var input = document.querySelector('#copy-input');
-    input.setSelectionRange(0, input.value.length + 1);
-    try {
-      var success = document.execCommand('copy');
-      if (success) {
-        $('#copy-button').trigger('copied', ['Copied!']);
-      } else {
-        $('#copy-button').trigger('copied', ['Copy with Ctrl-c']);
-      }
-    } catch (err) {
-      $('#copy-button').trigger('copied', ['Copy with Ctrl-c']);
-    }
-  });
+ $(document).on('click','#copy-button', function(event) {
+    var text = document.getElementById("email");
+    var clip = new Clipboard();
+    clip = text;
+    document.execCommand('copy');    
 
-  // Handler for updating the tooltip message.
-  $('#copy-button').bind('copied', function(event, message) {
-    $(this).attr('title', message)
-        .tooltip('fixTitle')
-        .tooltip('show')
-        .attr('title', "Copy to Clipboard")
-        .tooltip('fixTitle');
-  });
+    
  });
+
+  function copyText{
+  $( document ).ready(function(){    
+    var text = document.getElementById("copy-input");
+    var textHolder;
+    text.select()
+    document.execCommand('copy');
+  });
+
+  }
  </script>
 
  <script>
@@ -421,8 +429,9 @@ if (myAudio.ended = true)
     }, 1200);
  });
  </script>
+
  </div>
- </div>
+ 
 
 
       <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
@@ -577,7 +586,7 @@ Vote
      </div>
 <span style="font-size: 14px; margin-left: 5px; padding: 3px;" class="label label-success">Version 1.10</span>
 <h4 id="iptext">IP: </h4>
- <input id="ipbox" type="text" value="mc.lumix.online" onclick="this.select()">
+ <input id="ipbox" type="text" value="mc.lumix.online" onclick="this.select()" readonly>
 
    <ul style="padding-top: 20px;">
 	<li>Modern Building World </li>
