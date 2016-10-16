@@ -630,7 +630,7 @@ input:focus, textarea:focus {
 	padding: 5px;
 	border-radius: 1px;
 	line-height:15px;
-	margin-top: 230px;
+	margin-top: 8em;
 	display: block;
 	-webkit-transition: margin 0.2s ease-out;
     -moz-transition: margin 0.2s ease-out;
@@ -641,7 +641,7 @@ input:focus, textarea:focus {
 #bannerarrow:hover {
  	-webkit-transition: opacity .1s ease;
  	cursor:pointer;
-    margin-top: 235px;
+    margin-top: 8.1em;
 	}
 
 #musicbuttons div + div{
@@ -822,6 +822,7 @@ input:focus, textarea:focus {
 }
 
 #contactinfo button{
+	display: inline-block;
   position: relative;
   height: 45px;
   width: 600px;
