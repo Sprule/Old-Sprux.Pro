@@ -1,0 +1,183 @@
+
+    @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+	}
+
+html, body{
+	height:100%;
+	width: 100%;
+}
+
+.topcontainer{
+	width: 100%;
+	height: 38em;	
+	background-color: #03a9f4 ;
+}
+
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
+	background-image: -webkit-linear-gradient(top,#333333 0,#333333 100%) !important ;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#333333),to(#333333)) !important ;
+	background-image: linear-gradient(#333333 0,#333333 100%) !important ;
+	-webkit-box-shadow: none;
+}
+
+
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff !important; 
+    color: #ffffff !important; 
+
+}
+
+
+.navbar-brand, .navbar-nav > li > a {
+    text-shadow: none !important;
+}
+
+#navlogo{
+	margin:auto;
+	padding-bottom: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar{
+	font-family: "Monserrant", sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: none;
+    border: none;
+}
+
+.navbar li{
+	margin-left:10px;
+	padding-top: .8em;
+}
+
+.navbar-brand{
+	font-size:20px;
+	float:none;
+}
+
+.navbar-custom { 
+	background-color: rgba(51, 51, 51, 0);
+	position:;
+	border-bottom: 0px;
+	top: 0;
+    width: 100%;
+}
+
+#twitterfollow{
+	margin-top:15px;
+}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover{color:#fff ; background-color:none !important ; }
+.navbar-custom .navbar-nav>.active>a:hover,.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus { background-color: }
+.navbar-custom .navbar-nav>.active>a,.navbar-custom .navbar-nav>.open>a,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus { background-color: none}
+.dropdown-menu { background-color: #FFFFFF}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #428BCA}
+.navbar-custom { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar-custom { border-color: #333333}
+.navbar-custom .navbar-brand { color: #999999}
+.navbar-custom .navbar-brand:hover { color: #FFFFFF}
+.navbar-custom .navbar-nav>li>a { color: #FFFFFF}
+.navbar-custom .navbar-nav>li>a:hover, .navbar-custom .navbar-nav>li>a:focus .ease { border-bottom: white 2px solid;}
+.navbar-custom .navbar-nav>.active>a,.navbar-custom .navbar-nav>.open>a, .navbar-custom .navbar-nav>.open>a:hover, .navbar-custom .navbar-nav>.open>a:focus { color: #9CA9FF}
+.navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus .ease { }
+.dropdown-menu>li>a { color: #333333}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
+.navbar-custom .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar-custom .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-custom .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar-custom .navbar-nav>.dropdown>a:hover .caret  { border-bottom-color: #FFFFFF}
+
+
+
+.nav.navbar-right{
+	margin-right:10px;
+}
+
+h1 {
+	color: white;
+	font-size: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#recentnames{
+	min-width: 100%;
+	height: 6em;
+	background-color: #eaeaea;
+}
+
+#info{
+	min-width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}
+
+footer {
+  padding-bottom: 40px;
+  border-top: 2px solid #eee;
+  padding-top: 10px;
+  background-color: #2f97d4;
+  color: #ffffff;
+  height: 14em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer hr {
+
+}
+
+footer .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+footer ul{
+	list-style: none;
+	display: inline;
+	vertical-align: center;
+	padding-bottom: 30px;
+}
+
+footer li{
+	display:inline-block;
+	float:left;
+	margin-right: 2em;
+}
+
+#footerlogo{
+	font-size: 40px
+}
