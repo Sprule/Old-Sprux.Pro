@@ -167,25 +167,6 @@ function aud_play_pause() {
 
 
 
-/*
-    for(var i = 0; i < 16; i++)
-    {
-      for(var j = audioChosen.currentTime; j == audioChosen.duration; j++)
-      {
-
-      if(j++ == audioChosen.duration){
-        nextAudio = randomAudio();
-        audioChosen = nextAudio;
-        nextAudio.play();
-        break;
-      }
-
-      j = audioChosen.currentTime;
-      
-    }
-    }
-*/
-
   } else {
     myAudio.pause();
     document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
