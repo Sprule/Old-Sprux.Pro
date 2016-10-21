@@ -14,12 +14,18 @@
     <script type="text/javascript" src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
+    <script src="dist/clipboard.min.js"></script>
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
   </head>
 <body data-spy="scroll" data-target=".navbar-custom" data-offset="150">
 <script>
 	$('body').scrollspy({ target: '.navbar-custom' });
+</script>
+
+<script>
+new Clipboard('.btn');
 </script>
 
 <div class="background-overlay fadein"></div>
@@ -370,36 +376,13 @@ function aud_sound_change(){
      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
      <div class="col-sm-12">
  <div id="contactinfo" >
- <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button" title="Copy to Clipboard" onclick="copyText()">
+ <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button" title="Copy to Clipboard"  data-clipboard-text="contact@sprux.pro">
           <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
           <span id="email"> contact@sprux.pro </span>
           </p>
  </button>
 </div>
 </div>
-
-
- <script>
-
- $(document).on('click','#copy-button', function(event) {
-    var text = document.getElementById("email");
-    var clip = new Clipboard();
-    clip = text;
-    document.execCommand('copy');    
-
-    
- });
-
-  function copyText{
-  $( document ).ready(function(){    
-    var text = document.getElementById("copy-input");
-    var textHolder;
-    text.select()
-    document.execCommand('copy');
-  });
-
-  }
- </script>
 
  <script>
  $(document).on('click','#button', function(event) {
