@@ -25,7 +25,14 @@
 </script>
 
 <script>
-new Clipboard('.btn');
+var clipboard = new Clipboard('#copy-button');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
 </script>
 
 <div class="background-overlay fadein"></div>
@@ -376,7 +383,7 @@ function aud_sound_change(){
      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
      <div class="col-sm-12">
  <div id="contactinfo" >
- <button class="btn btn-default" type="button" id="copy-button" data-toggle="tooltip" data-placement="button" title="Copy to Clipboard"  data-clipboard-text="contact@sprux.pro">
+ <button class="btn btn-default" data-clipboard-text="contact@sprux.pro" type="button" id="copy-button" alt="Copy to clipboard">
           <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
           <span id="email"> contact@sprux.pro </span>
           </p>
