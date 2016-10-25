@@ -1,5 +1,8 @@
 <!DOCTYPE html>
  <head>
+
+<script src="https://use.fontawesome.com/4e4691abb4.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -8,6 +11,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
+
 
     <link rel='stylesheet' href='stylesheets/styleleaguegg.css' />
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -18,10 +23,8 @@
 
   </head>
 
-<body data-spy="scroll" data-target=".navbar-custom" data-offset="150">
-<script>
-	$('body').scrollspy({ target: '.navbar-custom' });
-</script>
+<body>
+
 
 <div class="background-overlay fadein"></div>
 
@@ -43,7 +46,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav" >
+      <ul class="nav navbar-nav  transparent" >
         <li class="active" id="topnavbutton" data-target="bannercontainer"  ><a href="#bannercontainer">Home</a></li>
         <li id="topnavbutton" data-target="leaguegg"  ><a  href="#leaguegg">Upcoming Names</a></li>
         <li id="topnavbutton" data-target="orbisio" ><a  href="#orbisio">Recent Names</a></li>
@@ -53,10 +56,12 @@
 
      <ul class="nav navbar-nav navbar-right">
 
- <li id="searchbar">
-  <span class="icon"><i class=fa fa-search></i></span>
-  <input id="searchbox" type="search" placeholder="Search Names" >
+ <li>
+ <i class="fa fa-twitter fa-fw" aria-hidden="true" style="color:white;"></i>
+ </li>
 
+ <li>
+<i class="fa fa-facebook fa-fw" style="color:white;" aria-hidden="true"></i>
  </li>
 
     </ul>
@@ -75,13 +80,13 @@
 
 <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
   <div class="col-sm-12">
-  <h2 style="color:#333333;"> A League of Legends Name Checker </h2>
+  <h2 style="color:#ffffff; font-weight: 100;"> A League of Legends Name Checker </h2>
   </div>
   </div>
 
   <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
   <div class="col-sm-12">
-  <h6  style="color:gold; font-weight: bolder;"> Player Names / Teams / Clubs </h3>
+  <h6  style="color:#ffffff; font-weight: 100;"> Player Names / Teams / Clubs </h3>
   </div>
   </div>
 
@@ -89,9 +94,11 @@
   <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
   <div class="col-sm-12">
 
+<div class="box">
   <div class="container-1">
-  <span class="icon"><i class=fa fa-search></i></span>
-  <input id="searchbox" type="search" placeholder="Search Names" >
+      <span class="icon"><i class="fa fa-search fa-fw"></i></span>
+  <input type="search" id="search" placeholder="Search Names" />
+</div>
 </div>
 
   </div>
@@ -103,73 +110,68 @@
 
 	</div> <!-- .topcontainer -->
 
-<div class="container" id="upcomingnames">
+<div class="namecontainer">
+
   <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
   <div class="col-sm-12">
- <h3 style="margin-left:2em">UPCOMING NAMES </h3>
+ <h3 style="margin-top:.5em">UPCOMING NAMES </h3>
  </div>
  </div>
 
   <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
   <div class="col-sm-12"> 
- <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-left text-muted" style="color:white; padding-left: 3em; padding-right: 3em;" > </span> </a>
-  <p> John </p>
-  <p> Riot Phreak </p>
+ <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-left text-muted"  > </span> </a>
   <p> Bjergsen </p>
-  <p> Caterina </p>
+  <p> Sprux </p>
   <p> Lukeisgay </p>
-   <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-right text-muted" style="color:white; padding-left: 3em; padding-right: 3em;" > </span> </a>
+   <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-right text-muted"  > </span> </a>
 </div>
 </div>
 
-</div>
+</div> <!-- .namecontainer -->
 
 <div class="container" id="info-1">
 <div class="col-sm-4">
-  <img class="pull-right" src="Images/Minehutlogo10.png"> </img>
+  <img class="pull-right" src="http://riot-generator.xyz/img/proof3.png"> </img>
 </div>
   <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
   <div class="col-sm-8">
-  <h2 class="pull-left"> How This Works </h2>
+  <h2 class="pull-left" style="display: inline-block;"> How This Works  </h2>
+
   </div>
   </div>
-<div id="infoparagraph">
-    <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
-      <div class="col-sm-12" style="height:100px;">
-      <ul style="list-style: none;">
-     <li> <p class="pull-left"> Levels 1-6: 6 months of inactivity immunity </p> </li>
-      <li> <p class="pull-left"> Levels 12: 1 year of inactivity immunity </p> </li>
-      <li> <p class="pull-left"> Levels 20: 1 year, 8 months of inactivity immunity </p> </li>
-      <li> <p class="pull-left"> Levels 30: 2 years, months of inactivity immunity </p> </li>
-      </ul>
-      </div>  
-      </div>
-</div>
+
+<div id="infoparagraph"> <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;"> <div class="col-sm-12" style="height:100px;"> <p class="pull-left text-left" id="infotext"> Levels 1-6: 6 months of inactivity immunity <br/> Levels 12: 1 year of inactivity immunity<br/> Levels 20: 1 year, 8 months of inactivity immunity<br/> Levels 30: 2 years, months of inactivity immunity</p> </div> </div> </div>
+
   </div>
 
 </div>
 
         <footer>
-            <div class="container">
-            <div class="col-md-4">
-                <div class="row">
+            <div class="container text-center" id="containerFooter">
+            <div class="col-md-5">
+                <div class="row ">
                
-                	<ul>
-                		<li id="Twitter"> <a href="https://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="35" width="35"> </a> </li>
+                	<ul class="footerSocialNav text-center text-left">
+                		<li id="footerSocial"> <i class="fa fa-twitter fa-lg" style="color:white;" aria-hidden="true"></i> </li>
 
-						<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="35" width="35" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="35" width="35" >  </a> </li>
+						<li id="footerSocial"> <i class="fa fa-facebook fa-lg" style="color:white;" aria-hidden="true"></i> </li>
 
-						<li id="Github"> <a href="https://github.com/Sprule"> <img height="35" width="35" src="http://www.measurementjs.com/icon-images/github-icon.png" height="35" width="35" >  </a> </li>
+						<li id="footerSocial"> <i class="fa fa-github fa-lg" style="color:white;" aria-hidden="true"></i> </li>
                 	</ul>
+
                     </div>
-                <div class="row">
-                    <div class="text-left">
-                    <p id="footerlogo"> League.gg </p>
+
+                <div class="row ">
+                    <div class="text-left ">
+                    <h4 id="footerlogo"> League.gg </h4>
+                    
                     </div>
                 </div>
                 <div class="row">
                 	<div class="text-left">
-                    <p id="copyright"> &copy; 2016 League.gg </p>                	
+                	<hr>
+                    <p id="copyright"> &copy; 2016 <a href="league.gg">League.gg</a> </p>                	
                 	</div>
                 </div>
 

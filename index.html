@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
     <script src="dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
@@ -24,15 +25,11 @@
 	$('body').scrollspy({ target: '.navbar-custom' });
 </script>
 
-<script>
-var clipboard = new Clipboard('#copy-button');
 
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
+<script>
+var clipboard = new Clipboard('.btn');
+
+
 </script>
 
 <div class="background-overlay fadein"></div>
@@ -382,14 +379,19 @@ function aud_sound_change(){
 
      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
      <div class="col-sm-12">
+
+
  <div id="contactinfo" >
- <button class="btn btn-default" data-clipboard-text="contact@sprux.pro" type="button" id="copy-button" alt="Copy to clipboard">
-          <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <span id="email"> contact@sprux.pro </span>
+ <button class="btn" id="copy-button" data-clipboard-text="contact@sprux.pro" data-toggle="tooltip" title="Hooray!">
+          <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true" data-clipboard-text="contact@sprux.pro"></span>
+ contact@sprux.pro 
           </p>
  </button>
+
 </div>
 </div>
+
+
 
  <script>
  $(document).on('click','#button', function(event) {
