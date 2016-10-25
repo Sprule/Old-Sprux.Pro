@@ -278,27 +278,9 @@ transition: background .55s ease;
  }
 }
 
-#info-1{
-	width:970px
-	min-height: 500px;
-	background-color: #ffffff;
-	display: inline;
-	align-items: center;
-	padding-left:20px;
-}
-
-#infoparagraph{
-	display: block;
-}
-
-#infotext{
-	align-text:left;
-}
-
 @media only screen and (max-width: 992px) {
 #infoimage-1{
-	width:290px;
-	height: 168px;
+	margin-bottom: 15px;
 }
 }
 
@@ -307,7 +289,7 @@ footer {
   padding-bottom: 40px;
   border-top: 2px solid #eee;
   padding-top: 10px;
-  background-color: #34495e;
+  background-color: #35404b;
   color: #ffffff;
   height: 12em;
   display: flex;
@@ -315,6 +297,7 @@ footer {
   justify-content: center;
   margin:auto 0px;
   width:100%;
+  margin-top: 100px;
 }
 
 footer hr {
