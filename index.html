@@ -1,119 +1,354 @@
 
-<html>
+<!DOCTYPE html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
     <link rel='stylesheet' href='stylesheets/style.css' />
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <script src="dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
   </head>
-<body>
+<body data-spy="scroll" data-target=".navbar-custom" data-offset="150">
+<script>
+	$('body').scrollspy({ target: '.navbar-custom' });
+</script>
+
+
+<script>
+var clipboard = new Clipboard('.btn');
+
+
+</script>
 
 <div class="background-overlay fadein"></div>
 
 
 <script>
-var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://minecraftgallery.com/wp-content/uploads/2013/04/minecraft-forest-mountain.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png'];
+	//var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://i.imgur.com/fmzDAG1.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png', 'http://static.planetminecraft.com/files/resource_media/screenshot/1238/2012-09-20_011855_3635514.jpg', 'http://upload.fr-minecraft.net/images/frminecraft/fr-minecraft_4ZUY_5ajgctz.jpg', 'http://i.imgur.com/v3SqErA.png', 'http://vignette2.wikia.nocookie.net/biomesoplenty/images/e/e9/RedwoodShader.png/revision/latest?cb=20140529175722']; //
 
-function imagenumber() {
+  var images = ['http://i.imgur.com/cYUKBFt.jpg', 'http://i.imgur.com/e1F6t02.jpg', 'http://i.imgur.com/IqlYjz4.jpg', 'http://i.imgur.com/P4o4w6a.jpg', 'http://i.imgur.com/1pMire6.jpg', 'http://wallpaper.zone/img/377599.jpg', 'http://i.imgur.com/9XauTR6.jpg', 'http://i.imgur.com/5BcJr5n.jpg']
+	
+	//Grabs a random image link.
+	function randomHeaderImage() {
+		var imglink = images[Math.floor(Math.random() * images.length)];
+		return imglink;
+	}
+	
+	$( document ).ready(function(){
+		$('#container').css("background-image", "url(" + randomHeaderImage() + ")");
+	});
+</script>
 
- var imglink = images[Math.floor(Math.random() * images.length)];
-
-  return imglink;
-}
-
-function imagechange(link){
-
-document.getElementById('container').style.backgroundImage = "url(" + link + ")";
-
-}
-
-$( document ).ready(function(){
-
-document.getElementById('container').innerHTML = imagechange(imagenumber());
-
+<script>
+$(document).scroll(function() {
+  var dHeight = $(this).height()-$('.banner').height();
+  if (dHeight >= $(this).scrollTop()) {
+    $('.navbar').css('background', 'rgba(51,51,51,' + $(this).scrollTop()*3 / dHeight + ')');
+  }
 });
+</script>
 
+<script>
+$(document).on('click','#topnavbutton', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1200);
+});
 </script>
 
 
 <div class="container" id="container">
 
-<div class="top">
+<script>
+  var audio = ['music/words.mp3', 'music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3', 'music/Am I Wrong.mp3', 'music/No Angels.mp3'];
+  
+  var audioChosen;
 
-  <ul id="ultopleft" list-style: none;>
-   <a href="/" <li id="logoimg"> <img src="Images/s.company.png" height="50" width="150" > </li> </a>
-    <audio id="audio">
-    <li id="musicimg">  </li>
+  //Grabs a random image link.
+  function randomAudio() {
+    var audioSrc = audio[Math.floor(Math.random() * audio.length)];
+    return audioSrc;
+  }
+
+  audioChosen = randomAudio();
+
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ audioChosen +"";
+  });
+
+function audioLocation(){
+  var audioC = audioChosen;
+  return audioC;
+}
+
+function audioArrayLength(){
+  var arrayLength = audio.length;
+  return arrayLength;
+}
+
+</script>
+
+<div>
+
+<audio  id="myTune" src="music/words.mp3" preload="auto">
+</audio>
 
 
-	</ul>
 
-	<div class="topmiddle">
-	<nav id="pages">
+<div id="button"><a onclick="aud_sound_change()"> <span id="soundbutton" class="glyphicon glyphicon-volume-up" style="border-bottom: 1px" >  </span> </a> </div>
 
-	<ul id="ulpages" list-style: none;>
+<div id="button"><a onclick="aud_play_pause()"> <span id="playbutton" class="glyphicon glyphicon-headphones" style="" >  </span> </a> </div>
 
-	<li id="nav1"> <a class="jumper" href="#leaguegg" style="text-decoration: none; color: #ffffff;"> <h2>League.gg</h2> </a> </li>
+<div id="button"><a onclick="aud_next_song()"> <span id="skipbutton" class="glyphicon glyphicon-fast-forward" style="" >  </span> </a> </div>
 
-	<li id="nav2"> <a class="jumper" href="#orbisio" style="text-decoration: none; color: #ffffff;"> <h2>Orbis.io</h2> </a> </li>
+<p id="songname"></p>
 
-	<li id="nav3"> <a class="jumper" href="#lumixcraft" style="text-decoration: none; color: #ffffff;"> <h2>LumixCraft</h2> </a> </li>
 
-    <li id="nav4"> <a class="jumper" href="#minehut"  style="text-decoration: none; color: #ffffff;"> <h2>Minehut</h2> </a> </li>
+<script>
+  var audio = ['music/m1.mp3', 'music/50cents.mp3', 'music/Cinema.mp3', 'music/neverland.mp3','music/broccoli.mp3', 'music/words.mp3', 'music/Fresh Eyes.mp3', 'music/Hurts So Good.mp3', 'music/Ignition.mp3', 'music/Let Me Hold You.mp3', 'music/Middle.mp3', 'music/Right Now.mp3', 'music/Starving.mp3', 'music/We Wont.mp3','music/Am I Wrong.mp3', 'music/No Angels.mp3'];
 
-    <li id="nav4"> <a class="jumper" href="#aboutme"  style="text-decoration: none; color: #ffffff;"> <h2>About Me</h2> </a> </li>
+var myAudio = document.getElementById("myTune");
+var nextAudio;
+var audioChosen = audioLocation();
+var audioDesc;
+var audioLength = audioChosen.duration;
 
-	</ul>
-	</nav>
 
+function aud_play_pause() {
+
+  if (myAudio.paused) {
+    myAudio.play();
+    myAudio.volume = 0.4;
+    document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
+    document.getElementById("soundbutton").className = "glyphicon glyphicon-volume-up"
+      if(audioChosen == (audio[0])){
+    audioDesc = "Kid Cudi- THE PRAYER";
+  } else if (audioChosen == (audio[1])) {
+    audioDesc = "50 cent - In Da Club (LILLE RemiXx)";
+  } else if (audioChosen == (audio[2])) {
+    audioDesc = "Samuel - Cinema (Neutre Edition)";
+  } else if (audioChosen == (audio[3])) {
+    audioDesc = "Abstract - Neverland (ft. Ruth B) (Prod. Blulake)";
+  } else if (audioChosen == (audio[4])) {
+    audioDesc = "BROCCOLI feat. Lil Yachty (Prod By. J Gramm)";
+  } else if (audioChosen == (audio[5])) {
+    audioDesc = "Anna Gracemen - Words (mi Ka Flip)";
+  } else if (audioChosen == (audio[6])) {
+    audioDesc = "Andy Grammer 'Fresh Eyes'";
+  } else if (audioChosen == (audio[7])) {
+    audioDesc = "Astrid S - Hurts So Good";
+  } else if (audioChosen == (audio[8])) {
+    audioDesc = "Phoebe Ryan - Ignition / Do You... (R.Kelly / Miguel Cover)";
+  } else if (audioChosen == (audio[9])) {
+    audioDesc = "Cheat Codes & Dante Klein - Let Me Hold You (Turn Me On)";
+  } else if (audioChosen == (audio[10])) {
+    audioDesc = "DJ Snake - Middle (Audio) ft. Bipolar Sunshine";
+  } else if (audioChosen == (audio[11])) {
+    audioDesc = "Akon - Right Now";
+  } else if (audioChosen == (audio[12])) {
+    audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
+  } else if (audioChosen == (audio[13])) {
+    audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
+  } else if (audioChosen == (audio[14])) {
+    audioDesc = "Nico & Vinz - Am I Wrong";
+  } else if (audioChosen == (audio[15])) {
+    audioDesc = "Bastille - No Angels (Stacie Todd 2015 Rework)";
+  } else {
+    audioDesc = "Song Name Not Found :("    
+  }
+
+
+    document.getElementById("songname").innerHTML = ""+ audioDesc +"";
+
+
+
+
+  } else {
+    myAudio.pause();
+    document.getElementById("playbutton").className = "glyphicon glyphicon-headphones";
+ 
+  }
+
+
+}
+
+function aud_next_song() {
+  myAudio.pause();
+
+  document.getElementById("songname").innerHTML = " ";
+
+  nextAudio = randomAudio();
+
+  $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+  document.getElementById("playbutton").className = "glyphicon glyphicon-pause";
+
+  myAudio.play();
+  myAudio.volume = 0.4;
+  
+  if(nextAudio == (audio[0])){
+    audioDesc = "Kid Cudi- THE PRAYER";
+  } else if (nextAudio == (audio[1])) {
+    audioDesc = "50 cent - In Da Club (LILLE RemiXx)";
+  } else if (nextAudio == (audio[2])) {
+    audioDesc = "Samuel - Cinema (Neutre Edition)";
+  } else if (nextAudio == (audio[3])) {
+    audioDesc = "Abstract - Neverland (ft. Ruth B) (Prod. Blulake)";
+  } else if (nextAudio == (audio[4])) {
+    audioDesc = "BROCCOLI feat. Lil Yachty (Prod By. J Gramm)";
+  } else if (nextAudio == (audio[5])) {
+    audioDesc = "Anna Gracemen - Words (mi Ka Flip)";
+  } else if (nextAudio == (audio[6])) {
+    audioDesc = "Andy Grammer 'Fresh Eyes'";
+  } else if (nextAudio == (audio[7])) {
+    audioDesc = "Astrid S - Hurts So Good";
+  } else if (nextAudio == (audio[8])) {
+    audioDesc = "Phoebe Ryan - Ignition / Do You... (R.Kelly / Miguel Cover)";
+  } else if (nextAudio == (audio[9])) {
+    audioDesc = "Cheat Codes & Dante Klein - Let Me Hold You (Turn Me On)";
+  } else if (nextAudio == (audio[10])) {
+    audioDesc = "DJ Snake - Middle (Audio) ft. Bipolar Sunshine";
+  } else if (nextAudio == (audio[11])) {
+    audioDesc = "Akon - Right Now";
+  } else if (nextAudio == (audio[12])) {
+    audioDesc = "Hailee Steinfeld, Grey - Starving ft. Zedd";
+  } else if (nextAudio == (audio[13])) {
+    audioDesc = "Jaymes Young & Phoebe Ryan - We Won't";
+  } else if (nextAudio == (audio[14])) {
+    audioDesc = "Nico & Vinz - Am I Wrong";
+  } else if (nextAudio == (audio[15])) {
+    audioDesc = "Bastille - No Angels (Stacie Todd 2015 Rework)";
+  } else {
+    audioDesc = "Song Name Not Found :("
+  }
+ 
+  document.getElementById("songname").innerHTML = ""+ audioDesc +"";
+
+  audioChosen = nextAudio;
+
+}
+
+function aud_new_song() {
+
+nextAudio = randomAudio();
+
+if (myAudio.ended = true)
+{
+    $( document ).ready(function(){
+    document.getElementById("myTune").src = ""+ nextAudio +"";
+  });
+    myAudio.play();
+}
+
+}
+
+
+function aud_sound_change(){
+
+  var but = document.getElementById('soundbutton');
+
+  if (but.className == "glyphicon glyphicon-volume-up" )
+ {
+  but.className = "glyphicon glyphicon-volume-down";
+
+  myAudio.volume = 0.2;
+  } else if (but.className == "glyphicon glyphicon-volume-down")
+ {
+  but.className = "glyphicon glyphicon-volume-off";
+
+  myAudio.volume = 0;
+
+ } else if (but.className == "glyphicon glyphicon-volume-off")
+ {
+  but.className = "glyphicon glyphicon-volume-up";
+
+  myAudio.volume = 0.4;
+
+ } 
+
+
+}
+
+</script>
+
+
+</div>
+
+ <div class="topcontainer" id="top">
+
+ <div class="navbar navbar-inverse transparent navbar-fixed-top navbar-custom " >
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+  <a class="navbar-brand" href="#top"><img id="navlogo" src="Images/s.company.png" alt="Sprux" height="50px" width="150px" > </img> </a> 
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active" id="topnavbutton" data-target="bannercontainer"  ><a href="#bannercontainer">Home</a></li>
+        <li id="topnavbutton" data-target="leaguegg"  ><a  href="#leaguegg">League.gg</a></li>
+        <li id="topnavbutton" data-target="orbisio" ><a  href="#orbisio">Orbis.io</a></li>
+        <li id="topnavbutton" data-target="lumixcraft" ><a  href="#lumixcraft">LumixCraft</a></li>
+        </ul>
+
+     <ul class="nav navbar-nav navbar-right">
+
+ <li id="twitterfollow"><a href="https://twitter.com/Spruxs" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @Spruxs</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8" ></script>
+
+ </li>
+
+    </ul>
+
+	</div>
+	</div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 	</div>
 
 
-
-	<div class="topright" >
-
-	<nav id="social-links">
-
-	<ul id="ultopright" list-style: none;>
-
-	<li id="Twitter"> <a href="https://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="29" width="30" > </a> </li>
-
-	<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="29" width="30" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="29" width="30" >  </a> </li>
-
-	<li id="Github"> <a href="https://github.com/Sprule"> <img height="29" width="30" src="http://www.measurementjs.com/icon-images/github-icon.png" height="29" width="30" >  </a> </li>
-
-	</ul>
-
-	</nav>
-
-	</div>
-
-	</div>
-
-
-
+ <div class="container" id="bannercontainer">
 	<div class="banner">
-<!--
- <video autoplay loop id="video-background" muted>
-  <source src="video.mp4" type="video/mp4">
-</video>
--->
+      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
 
-<span id="centerbanner">
+  <div class="col-sm-12">
+  <span id="centerbanner">
 		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
-		<p>A Professional Coder | GFX | VFX | Web Designer</p>
+    </div>
+    </div>
 
-<script language="javascript"> 
-function toggle() {
+
+     <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
+		<p>A <span style="color: orange;">Professional</span> Coder | GFX | VFX | Web Designer</p>
+  </div>
+  </div>
+
+  <script language="javascript"> 
+  function toggle() {
 	var text = document.getElementById("displaycontact");
-	var ele = document.getElementById("contacttexts");
+	var ele = document.getElementById("contactinfo");
 	if(text.style.display == "inline") {
     		text.style.display = "inline-block";
     		ele.style.display = "block";
@@ -124,63 +359,116 @@ function toggle() {
 		text.style.display = "inline";
 		ele.style.display = "none";
 
-	}
-} 
-</script>
+	 }
+ } 
+  </script>
 
-
+      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
 	<a id="displaycontact" href="javascript:toggle();" style="display:inline;"> <button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-globe" style="color:white" value='hide/show' > </span> Contact Now </button> </a>
 
-	<a href="https://twitter.com/intent/tweet?screen_name=Spruxs" class="" data-size="large" data-text="Why is Sprux so COOL! xD" data-show-count="false">	<button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-bullhorn" style="color:white" > </span> Share This </button></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+	<a data-text="Why is SPRUX SO COOL! xd" data-url="http://sprux.pro/" data-via="Spruxs" via="Spruxs" data-hashtags="Sprux" data-show-count="false" href="https://twitter.com/intent/tweet?text=@Sprux%20-%20http://sprux.pro/%20-%20Why%20is%20Sprux%20so%20cool!%20xd" class="" >	
+	<button style="margin: 10px;" class="fill"> 
+	<span id="contactnow" class="glyphicon glyphicon-bullhorn" style="color:white" > </span> 
+	Share This </button>
+	</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 		</span>
-  
-  <div id="contacttexts" style="display: none;">
-<div id="form-main" >
-  <div id="form-div">
-    <form class="form" id="form1">
-<div class="row">
-<div class="col">
-      <p class="name">
-        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
-      </p>
-      
-      <p class="email">
-        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-      </p>
+ </div>
+ </div>
 
-            <div class="submit">
-        <input type="submit" value="SEND" id="button-blue"/>
-        <div class="ease"></div>
-      </div>
+     <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+     <div class="col-sm-12">
+
+
+ <div id="contactinfo" >
+ <button class="btn" id="copy-button" data-clipboard-text="contact@sprux.pro" data-toggle="tooltip" title="Hooray!">
+          <p id="copy-input"> <span class="glyphicon glyphicon-envelope" aria-hidden="true" data-clipboard-text="contact@sprux.pro"></span>
+ contact@sprux.pro 
+          </p>
+ </button>
+
 </div>
-
-<div class="col">
-      <p class="text">
-        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
-      </p>
-      </div>
-      </div>
-
-    </form>
-  </div>
-
-	</div>
-	</div>
-
-<a class="jumper" href="#leaguegg"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
-
-	</div>
 </div>
 
 
+
+ <script>
+ $(document).on('click','#button', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1200);
+ });
+ </script>
+
+ </div>
+ 
+
+
+      <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
+
+ <div id="button" data-target="leaguegg">
+ <a class="jumper"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
+
+
+ </div>
+ </div>
+ </div>
+
+	</div> <!-- banner -->
+
+  </div> <!-- banner container -->
+
+
+
+
+ <div id="container-fluid" class="containerprojects">
+	<div id="projects">
+		<div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+				<div class="col-sm-12">
+					<div class="col-sm-6 " style=" border-right: 2px white solid; ">
+	<p id="projectstitle">  Projects </p>
+					</div>
+
+					<div class="col-sm-6">
+	<p id="projectsdesc" style="font-weight: 1;"> All the projects that I'm working on  </p>
+		<p id="projectsdesc" style="font-weight: 1;"> 
+
+ <button class="btn btn-primary" type="button">
+ League.gg
+ </button>
+
+<button class="btn btn-primary" type="button" ">
+ Orbis.io
+</button>
+</p>
+
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="container-fluid">
 <div id="leaguegg">
+    <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+        <div class="col-sm-12">
  <img src="Images/leaguelogo3.png" height="150" width="250"  > </img>
 <img src="Images/leaguelogo2.png" height="150" width="250"  > </img>
 <img src="Images/leaguelogo.png" height="150" width="250"  > </img>
+</div>
+</div>
 
-<h2 style="padding-bottom: 25px;"> A League of Legends Name Checker </h2>
+    <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+    <div class="col-sm-12">
+<h2 style="padding-bottom: 25px; float:middle"> A League of Legends Name Checker </h2>
+</div>
+</div>
+
 <span id="orbisiofeatures" style="font-size: 20px; margin-left: 5px; padding: 2px; padding-left: 5px; padding-right: 5px;" class="label label-default">FEATURES</span>
 <ul style="padding-top: 20px;">
 	<li>Check Player Names </li>
@@ -190,17 +478,27 @@ function toggle() {
 </ul>
 
 		<a href="http://league.gg/"><button style="margin: 10px;" class="fill"> <span id="leagueggbutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span> Visit Now </button></a>
-  </div>
+
+</div>
+</div>
 
   
-
-
+<div id="container-fluid">
 <div id="orbisio">
+    <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+            <div class="col-sm-12">
  <img src="Images/orbislogo4.png" height="150" width="250"  > </img>
  <img src="Images/orbislogo3.png" height="150" width="250"  > </img>
   <img src="Images/orbislogo2.png" height="150" width="250"  > </img>
    <img src="Images/orbislogo.png" height="150" width="250"  > </img>
+   </div>
+   </div>
+
+       <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+               <div class="col-sm-12">
    <h2 style="padding-bottom: 25px;"> A MapleStory Name Checker </h2>
+   </div>
+   </div>
 
 <span id="orbisiofeatures" style="font-size: 20px; margin-left: 5px; padding: 2px; padding-left: 5px; padding-right: 5px;" class="label label-info">FEATURES</span>
 
@@ -214,16 +512,54 @@ function toggle() {
 	<a href="http://orbis.io/">	<button style="margin: 10px;" class="fill"> <span id="orbisiobutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span>  Visit Now  </button></a>
 
   </div>
+  </div>
 
+<div id="container-fluid ">
+	<div id="server">
+		<div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+				<div class="col-md-12">
+					<div class="col-md-6" style="border-right: 2px white solid; ;">
+	<p id="servertitle">  Server </p>
+					</div>
+
+					<div class="col-md-6">
+	<p id="serverdesc" style="font-weight: 1;"> A Creative Building Minecraft Server  </p>
+		<p id="serverdesc" style="font-weight: 1;"> 
+
+<a href="https://lumixcraft.enjin.com/forum" ><button class="btn btn-primary" type="button" >
+Forums
+</button> </a>
+<a href="https://lumixcraft.enjin.com/shop"> <button class="btn btn-primary" type="button">
+Store
+</button> </a>
+<a href="http://www.planetminecraft.com/server/lumixcraft/vote/" ><button class="btn btn-primary" type="button">
+Vote
+</button> </a>
+</p>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<div id="container-fluid">
 <div id="lumixcraft">
+    <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+    <div class="col-sm-12">
 <img src="Images/lumixlogo2.png" height="150" width="350"  > </img>
  <img src="Images/lumixlogo.png" height="150" width="150"  > </img>
   <img id="lumixlogo3" src="Images/lumixlogo3.png" height="150" width="390" > </img>
+</div>
+</div>
 
+    <div class="row-fluid vertical-align text-center" style="float: none; margin: 0 auto; overflow: hidden;">
+    <div class="col-sm-12">
      <h2> LumixCraft | A Community Building Server</h2>
+     </div>
+     </div>
 <span style="font-size: 14px; margin-left: 5px; padding: 3px;" class="label label-success">Version 1.10</span>
 <h4 id="iptext">IP: </h4>
- <input id="ipbox" type="text" value="mc.lumix.online" onclick="this.select()">
+ <input id="ipbox" type="text" value="mc.lumix.online" onclick="this.select()" readonly>
 
    <ul style="padding-top: 20px;">
 	<li>Modern Building World </li>
@@ -237,6 +573,9 @@ function toggle() {
 	<a href="https://lumixcraft.enjin.com">	<button style="margin: 10px;" class="fill"> <span id="lumixcraftbutton" class="glyphicon glyphicon-eye-open" style="color:#383736;"  > </span>  Visit Now  </button></a>
 
 </div>
+</div>
+
+<!--
 
 <div id="minehut">
 
@@ -271,38 +610,56 @@ function toggle() {
 
 </ul>
 
+</div>
 
-<div class="row row-centered">
-	<a href="https://minehut.com">	<button style="margin:93px;" class="fill"> <span id="minehutbutton" class="glyphicon glyphicon-eye-open" style="color:#ffffff;"  > </span>  Visit Now  </button></a>
+-->
+
+<footer class="footerarea">
+	<div class="grid-container">
+
+<div class="row-fluid">
+  <div class="col-md-12">	
+
+<div class="row-fluid">
+<div class="col-md-12">
+
+   <a href="/"  id="logoimgf"> <img src="Images/s.company.png" height="70" width="250" > </a>
+
+
+<div class="row-fluid">
+<div class="col-md-12">
+<ul id="ultopright">
+
+<li id="Twitter"> <a href="https://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="35" width="35"> </a> </li>
+
+	<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="35" width="35" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="35" width="35" >  </a> </li>
+
+	<li id="Github"> <a href="https://github.com/Sprule"> <img height="35" width="35" src="http://www.measurementjs.com/icon-images/github-icon.png" height="35" width="35" >  </a> </li>
+
+</ul>
+
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="col-md-12">
+<h2 id="copyright" >&copy; 2016 Sprux.pro </h2>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 </div>
 
 
 </div>
-
-<div class="footerarea">
-
-	<h2  >&copy; 2016 Sprux.pro </h2>
-
-	<nav id="fpages">
-
-	<ul id="fulpages" list-style: none; >
-
-	<li id="fnav1"> <a class="jumper" href="#leaguegg" style="text-decoration: none; color: #ffffff;"> <h2>League.gg</h2> </a> </li>
-
-	<li id="fnav2"> <a class="jumper" href="#orbisio" style="text-decoration: none; color: #ffffff;"> <h2>Orbis.io</h2> </a> </li>
-
-	<li id="fnav3"> <a class="jumper" href="#lumixcraft" style="text-decoration: none; color: #ffffff;"> <h2>LumixCraft</h2> </a> </li>
-
-    <li id="fnav4"> <a class="jumper" href="#minehut"  style="text-decoration: none; color: #ffffff;"> <h2>Minehut</h2> </a> </li>
-
-    <li id="fnav4"> <a class="jumper" href="#aboutme"  style="text-decoration: none; color: #ffffff;"> <h2>About Me</h2> </a> </li>
-
-	</ul>
-	</nav>
-
 </div>
+</footer>
 
-</div>
+
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.5.0/APlayer.min.js"></script>
 

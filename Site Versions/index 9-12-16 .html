@@ -1,0 +1,350 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+  </head>
+<body>
+
+
+<div class="background-overlay fadein"></div>
+
+
+<script>
+	var images = ['http://i.imgur.com/CfMD6dB.jpg', 'http://i.imgur.com/8vwGUPc.jpg', 'http://i.imgur.com/nTnhDpk.jpg', 'http://minecraftgallery.com/wp-content/uploads/2013/04/minecraft-forest-mountain.jpg', 'http://i.imgur.com/if6Ds6E.png', 'http://minecraftgallery.com/wp-content/uploads/2014/01/minecraft-mountains-worldpainter.png'];
+	
+	//Grabas a random image link.
+	function randomHeaderImage() {
+		var imglink = images[Math.floor(Math.random() * images.length)];
+		return imglink;
+	}
+	
+	$( document ).ready(function(){
+		$('#container').css("background-image", "url(" + randomHeaderImage() + ")");
+	});
+</script>
+
+
+<div class="container" id="container">
+
+<div class="top">
+
+  <ul id="ultopleft" list-style: none;>
+   <a href="/" <li id="logoimg"> <img src="Images/s.company.png" height="50" width="150" > </li> </a>
+    <audio id="audio">
+    <li id="musicimg">  </li>
+
+
+	</ul>
+
+	<div class="topmiddle">
+	<nav id="pages">
+
+	<ul id="ulpages" list-style: none;>
+
+	<li id="nav1"> <a class="jumper" href="#leaguegg" style="text-decoration: none; color: #ffffff;"> <h2>League.gg</h2> </a> </li>
+
+	<li id="nav2"> <a class="jumper" href="#orbisio" style="text-decoration: none; color: #ffffff;"> <h2>Orbis.io</h2> </a> </li>
+
+	<li id="nav3"> <a class="jumper" href="#lumixcraft" style="text-decoration: none; color: #ffffff;"> <h2>LumixCraft</h2> </a> </li>
+
+    <li id="nav4"> <a class="jumper" href="#minehut"  style="text-decoration: none; color: #ffffff;"> <h2>Minehut</h2> </a> </li>
+
+    <li id="nav4"> <a class="jumper" href="#aboutme"  style="text-decoration: none; color: #ffffff;"> <h2>About Me</h2> </a> </li>
+
+	</ul>
+	</nav>
+
+	</div>
+
+
+
+	<div class="topright" >
+
+	<nav id="social-links">
+
+	<ul id="ultopright" list-style: none;>
+
+	<li><a href="https://twitter.com/Spruxs" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @Spruxs</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8" ></script>
+
+</li>
+
+	<li id="Twitter"> <a href="https://twitter.com/Spruxs"> <img  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png" height="29" width="30" > </a> </li>
+
+	<li id="Youtube"> <a href="https://www.youtube.com/channel/UCgZvKSsZFZ1SuPnew-_C-QA"> <img height="29" width="30" src="http://www.everysecond.io/assets/youtube/youtube.svg" height="29" width="30" >  </a> </li>
+
+	<li id="Github"> <a href="https://github.com/Sprule"> <img height="29" width="30" src="http://www.measurementjs.com/icon-images/github-icon.png" height="29" width="30" >  </a> </li>
+
+	</ul>
+
+	</nav>
+
+	</div>
+
+	</div>
+
+
+
+	<div class="banner">
+<!--
+ <video autoplay loop id="video-background" muted>
+  <source src="video.mp4" type="video/mp4">
+</video>
+-->
+
+<span id="centerbanner">
+		<h2 style=" border-radius: 3px; border:2px; padding:15px; border-style: solid; display: inline-block; border-color: white;">SPRUX</h2>
+		<p>A Professional Coder | GFX | VFX | Web Designer</p>
+
+<script language="javascript"> 
+function toggle() {
+	var text = document.getElementById("displaycontact");
+	var ele = document.getElementById("contacttexts");
+	if(text.style.display == "inline") {
+    		text.style.display = "inline-block";
+    		ele.style.display = "block";
+  	}
+	else if(text.style.display != "inline") {
+		text.style.display = "inline";
+		ele.style.display = "none";
+	}
+} 
+</script>
+
+
+	<a id="displaycontact" href="javascript:toggle();" style="display:inline;"> <button style="margin: 10px;" class="fill"> <span id="contactnow" class="glyphicon glyphicon-globe" style="color:white" value='hide/show' > </span> Contact Now </button> </a>
+
+	<a data-text="Why is SPRUX SO COOL! xd" data-url="http://sprux.pro/" data-via="Spruxs" via="Spruxs" data-hashtags="Sprux" data-show-count="false" href="https://twitter.com/intent/tweet?text=@Sprux%20-%20http://sprux.pro/%20-%20Why%20is%20Sprux%20so%20cool!%20xd" class="" >	
+	<button style="margin: 10px;" class="fill"> 
+	<span id="contactnow" class="glyphicon glyphicon-bullhorn" style="color:white" > </span> 
+	Share This </button>
+	</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+		</span>
+
+  <div id="contacttexts" style="display: none;">
+<div id="form-main" >
+  <div id="form-div">
+    <form class="form" id="form1">
+<div class="row">
+<div class="col">
+      <p class="name">
+        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+      </p>
+      
+      <p class="email">
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+      </p>
+
+            <div class="submit">
+        <input type="submit" value="SEND" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+</div>
+
+<div class="col">
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      </div>
+      </div>
+
+    </form>
+  </div>
+
+	</div>
+	</div>
+
+<a class="jumper" href="#leaguegg"> <span id="bannerarrow" class="glyphicon glyphicon-menu-down" style="color:white" > </span> </a>
+
+	</div>
+</div>
+
+
+<div id="leaguegg">
+ <img src="Images/leaguelogo3.png" height="150" width="250"  > </img>
+<img src="Images/leaguelogo2.png" height="150" width="250"  > </img>
+<img src="Images/leaguelogo.png" height="150" width="250"  > </img>
+
+<h2 style="padding-bottom: 25px;"> A League of Legends Name Checker </h2>
+<span id="orbisiofeatures" style="font-size: 20px; margin-left: 5px; padding: 2px; padding-left: 5px; padding-right: 5px;" class="label label-default">FEATURES</span>
+<ul style="padding-top: 20px;">
+	<li>Check Player Names </li>
+	<li>Check Team Names </li>
+	<li>Check Club Names </li>
+	<li>View Upcoming & Recent Names </li>
+</ul>
+
+		<a href="http://league.gg/"><button style="margin: 10px;" class="fill"> <span id="leagueggbutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span> Visit Now </button></a>
+  </div>
+
+  
+
+
+<div id="orbisio">
+ <img src="Images/orbislogo4.png" height="150" width="250"  > </img>
+ <img src="Images/orbislogo3.png" height="150" width="250"  > </img>
+  <img src="Images/orbislogo2.png" height="150" width="250"  > </img>
+   <img src="Images/orbislogo.png" height="150" width="250"  > </img>
+   <h2 style="padding-bottom: 25px;"> A MapleStory Name Checker </h2>
+
+<span id="orbisiofeatures" style="font-size: 20px; margin-left: 5px; padding: 2px; padding-left: 5px; padding-right: 5px;" class="label label-info">FEATURES</span>
+
+   <ul style="padding-top: 20px;">
+	<li>Check Player Names </li>
+	<li>Dictionary Name Filter</li>
+	<li>Name Length Filter</li>	
+	<li>View Recent Names</li>
+</ul>
+
+	<a href="http://orbis.io/">	<button style="margin: 10px;" class="fill"> <span id="orbisiobutton" class="glyphicon glyphicon-eye-open" style="color:white" > </span>  Visit Now  </button></a>
+
+  </div>
+
+<div id="lumixcraft">
+<img src="Images/lumixlogo2.png" height="150" width="350"  > </img>
+ <img src="Images/lumixlogo.png" height="150" width="150"  > </img>
+  <img id="lumixlogo3" src="Images/lumixlogo3.png" height="150" width="390" > </img>
+
+     <h2> LumixCraft | A Community Building Server</h2>
+<span style="font-size: 14px; margin-left: 5px; padding: 3px;" class="label label-success">Version 1.10</span>
+<h4 id="iptext">IP: </h4>
+ <input id="ipbox" type="text" value="mc.lumix.online" onclick="this.select()">
+
+   <ul style="padding-top: 20px;">
+	<li>Modern Building World </li>
+	<li>Medieval Building World</li>
+	<li>Minigame Workshop World</li>
+	<li>Project Recruitment Hub</li>	
+	<li>90x90 & 45x45 Plot Worlds</li>
+</ul>
+
+
+	<a href="https://lumixcraft.enjin.com">	<button style="margin: 10px;" class="fill"> <span id="lumixcraftbutton" class="glyphicon glyphicon-eye-open" style="color:#383736;"  > </span>  Visit Now  </button></a>
+
+</div>
+
+<div id="minehut">
+
+<h2> Minehut Logo Designs </h2>
+<p> By Sprux </p>
+
+   <ul style="padding-top: 20px;">
+
+<div class="row">
+	<li>  
+	<img id="mhlogo" src="Images/Minehutofficial6.png" height="150" width="250" > </img>
+    <img id="mhlogo2" src="Images/Minehutofficial2.png" height="150" width="250" > </img>
+    <img id="mhlogo3" src="Images/Minehutofficial3.png" height="150" width="250" > </img>
+      <img id="mhlogo4" src="Images/Minehutofficial4.png" height="150" width="250" > </img>
+      <img id="mhlogo5" src="Images/Minehutofficial5.png" height="150" width="250" > </img>
+      <img id="mhlogo6" src="Images/Minehutofficial7.png" height="150" width="250" > </img>
+    </li>
+</div>
+
+<div class="row">
+
+<li>
+	<img id="mhlogov5" src="Images/Minehutofficialv7.png" height="150" width="250" > </img>
+    <img id="mhlogov5" src="Images/Minehutofficialv2.png" height="150" width="250" > </img>
+    <img id="mhlogov5" src="Images/Minehutofficialv3.png" height="150" width="250" > </img>
+      <img id="mhlogov5" src="Images/Minehutofficialv4.png" height="150" width="250" > </img>
+      <img id="mhlogov5" src="Images/Minehutofficialv5.png" height="150" width="250" > </img>
+      <img id="mhlogov6" src="Images/Minehutofficialv6.png" height="150" width="250" > </img>
+</li>
+</div>
+
+
+</ul>
+
+
+<div class="row row-centered">
+	<a href="https://minehut.com">	<button style="margin:93px;" class="fill"> <span id="minehutbutton" class="glyphicon glyphicon-eye-open" style="color:#ffffff;"  > </span>  Visit Now  </button></a>
+</div>
+
+
+</div>
+
+<footer class="footerarea">
+	<div class="grid-container">
+<div class="row-fluid">
+  <div class="col-md-12">	
+
+<div class="row-fluid">
+  <div class="col-md-4">
+
+   <a href="/"  id="logoimgf"> <img src="Images/s.company.png" height="70" width="250" 
+   display="inline-block"> </a>
+
+<div class="row-fluid">
+ <div class="col-md-12">
+
+<p id="footerp" > Making tools that make life easier</p>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="col-md-12">
+<p id="footerp2"> The owner of League.gg and Orbis.io </p>
+
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="col-md-12">
+<h2 id="copyright" >&copy; 2016 Sprux.pro </h2>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="col-md-8">
+	<nav id="fpages">
+
+	<ul id="fulpages" list-style: none; >
+
+	<li id="fnav1"> <a class="jumper" href="#leaguegg" style="text-decoration: none; color: #ffffff;"> <h2>League.gg</h2> </a> </li>
+
+	<li id="fnav2"> <a class="jumper" href="#orbisio" style="text-decoration: none; color: #ffffff;"> <h2>Orbis.io</h2> </a> </li>
+
+	<li id="fnav3"> <a class="jumper" href="#lumixcraft" style="text-decoration: none; color: #ffffff;"> <h2>LumixCraft</h2> </a> </li>
+
+    <li id="fnav4"> <a class="jumper" href="#minehut"  style="text-decoration: none; color: #ffffff;"> <h2>Minehut</h2> </a> </li>
+
+    <li id="fnav4"> <a class="jumper" href="#aboutme"  style="text-decoration: none; color: #ffffff;"> <h2>About Me</h2> </a> </li>
+
+	</ul>
+	</nav>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+</footer>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.5.0/APlayer.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="http://vjs.zencdn.net/5.11.6/video.js"></script>
+
+</body>
+</html>
+</html>
