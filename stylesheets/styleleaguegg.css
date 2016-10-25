@@ -280,8 +280,7 @@ transition: background .55s ease;
 
 #info-1{
 	width:970px
-	margin: 0 auto;
-	height: 50%;
+	min-height: 500px;
 	background-color: #ffffff;
 	display: inline;
 	align-items: center;
@@ -296,6 +295,13 @@ transition: background .55s ease;
 	align-text:left;
 }
 
+@media only screen and (max-width: 992px) {
+#infoimage-1{
+	width:290px;
+	height: 168px;
+}
+}
+
 
 footer {
   padding-bottom: 40px;
@@ -308,6 +314,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin:auto 0px;
+  width:100%;
 }
 
 footer hr {
