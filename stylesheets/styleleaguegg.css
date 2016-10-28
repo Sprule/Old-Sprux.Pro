@@ -157,7 +157,23 @@ h1 {
   justify-content: center;
 }
 
- 
+ .searchfilter{
+  padding: 0px 0px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border: 0px #ffffff solid;
+  text-transform: uppercase;
+  background: none;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+ }
+
+
 .box{
   margin: 100px auto;
   width: 300px;
@@ -165,7 +181,7 @@ h1 {
 }
 
 .container-1{
-  width: 500px;
+  width: 480px;
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
@@ -201,10 +217,19 @@ h1 {
    color: #65737e;  
 }
 
+.icon2{
+  position: absolute;
+  margin-top: 15.5px;
+    margin-right: 20px;
+  float:left;
+  z-index: 1;
+  color: #4f5b66;
+}
+
 .container-1 .icon{
   position: absolute;
   top: 50%;
-  margin-left: 17px;
+  margin-left: 25px;
   margin-top: 12.5px;
   z-index: 1;
   color: #4f5b66;
@@ -278,12 +303,19 @@ transition: background .55s ease;
  }
 }
 
-@media only screen and (max-width: 992px) {
-#infoimage-1{
-	margin-bottom: 15px;
-}
+#namework{
+	width:65%;
+	float:left;
+
 }
 
+#info-2{
+	max-width:780px;
+}
+
+#info-3{
+	height:300px;
+}
 
 footer {
   padding-bottom: 40px;
