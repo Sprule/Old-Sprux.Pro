@@ -307,16 +307,27 @@ transition: background .55s ease;
 
 #namework{
 	width:65%;
-	float:left;
 
 }
 
+
+#info-1{
+	min-width:780px;
+}
+
+#info-1 img{
+ margin:auto;
+}
+
+
+
 #info-2{
-	max-width:780px;
+	min-width:780px;
 }
 
 #info-3{
 	height:300px;
+	min-width:780px;
 }
 
 footer {
